@@ -1,0 +1,45 @@
+body {
+  color: white; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:active {
+  text-decoration: none; }
+
+a:visited {
+  color: white;
+  text-decoration: none; }
+
+.logo {
+  text-align: center;
+  font-weight: bold; }
+
+.search {
+  margin-top: 1rem; }
+
+.teaser {
+  margin-top: 1rem; }
+
+.icon--small {
+  font-size: 2em; }
+
+.nav {
+  background-color: #cccccc; }
+
+.results {
+  color: #cccccc; }
+
+.nav__lend, .nav__rent {
+  text-align: center; }
+
+.nav__messages {
+  text-align: right; }
+
+.footer {
+  text-decoration: none;
+  text-align: right; }
