@@ -1,4 +1,6 @@
-<html>
+<!doctype html>
+
+<html ng-app="randl">
 
     <head>
         <link rel="stylesheet" href="styles/fonts/iconic/iconic_stroke.css" type="text/css" media="screen">
@@ -6,44 +8,20 @@
         <link rel="stylesheet" type="text/css" href="styles/catalog/dist/main.css">
     </head>
 
-    <body ng-app>
+    <body>
 
-        <header>
-            <nav class="s-all nav">
-                <div class="s1 nav__item nav__icon nav__favourites"><a href="#" class="iconic star icon--small"></a></div>
-                <div class="s2-s3 nav__icon logo">RANDL</div>
-                <div class="s4 nav__item nav__icon nav__messages"><a href="#" class="iconic comment_stroke icon--small"></a></div>
-            </nav>
-        </header>
-
-        <div class="search s-all">
-            <input class="s1-s3" ng-model="query" />
-            <button class="s4">RENT</button>
-        </div>
-
-        <div class="results s-all" ng-controller="RentsController">
-            <div ng-repeat="rent in rents | filter:query">
-                <div>{{rent.description}}</div>
+        <div class="search s-all" ng-controller="SearchController">
+            <div>
+                <input suggest-search class="s1-s3 search-field" type="search" ng-model="query" placeholder="Search term..." />
+                <button class="s4 search-submit iconic magnifying_glass"></button>
+                <div class="search-suggest">
+                    <div ng-repeat="hit in hits" class="search-hit"><a href="#{{hit.name}}">{{hit.name}}</a></div>
+                </div>
             </div>
         </div>
 
-        <!-- <div class="teaser s-all">
-            <img src="img/bohrmaschine.jpg" class="teaser__item s1" />
-            <img src="img/bohrmaschine.jpg" class="teaser__item--active s2-s3" />
-            <img src="img/bohrmaschine.jpg" class="teaser__item s4" />
-        </div> -->
-
-        <footer class="s-all footer">
-            <a href="#">Impressum</a>
-        </footer>
-
-        <footer>
-            <nav class="s-all nav">
-                <div class="s1-s2 nav__item nav__rent"><a href="rent" class="icon--small">RENT!</a></div>
-                <div class="s3-s4 nav__item nav__lend"><a href="lent" class="icon--small">LEND!</a></div>
-            </nav>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script src="bower_components/jquery/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
         <script src="scripts/src/main.js"></script>
     </body>
 </html>

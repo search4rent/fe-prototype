@@ -1,0 +1,16 @@
+{
+  "name": "randl",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "angular": "~1.0.7"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
