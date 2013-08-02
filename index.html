@@ -15,7 +15,7 @@
                 <input suggest-search class="s1-s3 search-field" type="search" ng-model="query" placeholder="Search term..." />
                 <button class="s4 search-submit iconic magnifying_glass"></button>
                 <div class="search-suggest">
-                    <div ng-repeat="hit in hits" class="search-hit"><a href="#{{hit.name}}">{{hit.name}}</a></div>
+                    <div ng-repeat="hit in hits" class="search-hit"><a href="#"><span ng-bind-html-unsafe="hit"></span></a></div>
                 </div>
             </div>
         </div>
