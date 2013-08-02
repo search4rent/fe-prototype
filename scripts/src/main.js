@@ -24,8 +24,9 @@ angular.module( "randl" ).controller( "SearchController", function ( $scope, $ht
         };
 
         $http.get( "/service/search4rent/-/input/" + val ).
+
             success( function( data ) {
-                console.log( data );
+                
                 $scope.hits = data.items.map( function ( item ) {
                     return item.title.name[ 0 ];
                 });
