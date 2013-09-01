@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Switch to product root
+cd "$(dirname "$0")"
+cd ..
+
+cat ./bower_components/jquery/jquery.js\
+ ./bower_components/angular/angular.js\
+ ./bower_components/angular-route/angular-route.js\
+ > scripts/lib/all.js
