@@ -1,12 +1,12 @@
 .search-field {
   border: 2px solid #cccccc;
   padding: 0.5rem 0 0.5rem 0;
-  font-size: 0.5em;
+  font-size: 1rem;
   line-height: 1;
   border-radius: 2px; }
 
 .search-submit {
-  font-size: 1em;
+  font-size: 2rem;
   line-height: 1;
   background: #4e68c7;
   border: none;
@@ -16,9 +16,12 @@
 .search-suggest {
   border: 2px solid #cccccc;
   background: white;
-  font-size: 0.5em;
+  font-size: 1.2rem;
   position: absolute;
   display: none; }
+
+.search-item {
+  padding: 0.5rem; }
 
 .search-item--active {
   background: #4e68c7;
@@ -31,3 +34,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
   color: #cccccc; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+a:visited {
+  color: inherit; }
+
+a:hover {
+  font-weight: bold; }
