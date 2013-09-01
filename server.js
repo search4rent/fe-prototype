@@ -9,4 +9,8 @@ app.get( "*", function ( req, res, next ) {
     res.sendfile( path.join( __dirname, "index.html" ) );
 });
 
-app.listen( 3000 );
+var port = process.env.PORT || 3000;
+
+app.listen( port, function () {
+    console.log( "Listening on " + port );
+});
