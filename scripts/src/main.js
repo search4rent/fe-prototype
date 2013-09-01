@@ -14,7 +14,7 @@ angular.module( "randl.controllers" ).controller( "MainController", function ( $
 
 angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {
 
-    $routeProvider.when( "/home", {
+    $routeProvider.when( "/", {
         templateUrl: "views/home.html",
         controller: "HomeController"
     });
