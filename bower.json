@@ -1,7 +1,7 @@
 {
   "name": "randl",
   "version": "0.0.1",
-  "dependencies": {
+  "devDependencies": {
     "jquery": "~1.9.1",
     "angular": "~1.0.7",
     "angular-route": "~1.2.0-rc.1"
