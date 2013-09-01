@@ -11,11 +11,19 @@
     <body>
         
         <div ng-controller="MainController">
-            <a href="/home">HOME</a><br/>
+            <div class="header-wrap">
+                <div class="logo logo-home">
+                    <a href="/home"></a>      
+                </div>
+                <div class="header-link header-profile">
+                    <a href="/user/123" class="link-negative typo-size-m">Sign In</a>        
+                </div>    
+            </div>
+            <!-- <a href="/home">HOME</a><br/>
             <a href="/items">Items</a><br/>
             <a href="/item/123">Item 123</a><br/>
             <a href="/item">New Item</a><br/>
-            <a href="/user/123">User 123</a><br/>
+            <a href="/user/123">User 123</a><br/> -->
         </div>
 
         <div ng-view></div>

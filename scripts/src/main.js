@@ -55,7 +55,7 @@ angular.module( "randl.controllers" ).controller( "HomeController", function () 
 });
 
 angular.module( "randl.controllers" ).controller( "UserController", function () {
-    console.log( "home" );
+    console.log( "user" );
 });
 
 
