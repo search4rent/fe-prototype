@@ -1,0 +1,21 @@
+{
+  "name": "randl",
+  "version": "0.0.1",
+  "description": "# Init `bin/init`",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~3.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/search4rent/fe-prototype.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
