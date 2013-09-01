@@ -1,33 +1,137 @@
-.search-field {
-  border: 2px solid #cccccc;
-  padding: 0.5rem 0 0.5rem 0;
-  font-size: 0.5em;
-  line-height: 1;
-  border-radius: 2px; }
+@font-face {
+  font-family: "Quicksand";
+  src: url(../../fonts/quicksand/Quicksand_Book.otf) format(opentype);
+  font-weight: normal; }
 
-.search-submit {
-  font-size: 1em;
-  line-height: 1;
-  background: #4e68c7;
-  border: none;
-  border-radius: 3px;
-  color: white; }
+.typo-size-xl {
+  font-size: 3.2rem; }
 
-.search-suggest {
-  border: 2px solid #cccccc;
-  background: white;
-  font-size: 0.5em;
-  position: absolute;
-  display: none; }
-
-.search-item--active {
-  background: #4e68c7;
-  color: white; }
-
-.search {
+.typo-size-l {
   font-size: 2rem; }
 
+.typo-size-m {
+  font-size: 1.5rem; }
+
+.typo-size-s {
+  font-size: 1.3rem; }
+
+.typo-color-white {
+  color: white; }
+
+a.link-negative:link,
+a.link-negative:visited {
+  color: white; }
+
+.button-search,
+.button-lend,
+.button-rent {
+  font-family: Quicksand, Verdana, Geneva, Arial, sans-serif; }
+
+.button-search {
+  background: -webkit-linear-gradient(-25deg, #0971b2 50%, #1485cc 51%);
+  background: -moz-linear-gradient(-25deg, #0971b2 50%, #1485cc 51%);
+  background: -ms-linear-gradient(-25deg, #0971b2 50%, #1485cc 51%);
+  background: -o-linear-gradient(-25deg, #0971b2 50%, #1485cc 51%);
+  background: linear-gradient(-25deg, #0971b2 50%, #1485cc 51%);
+  color: white; }
+
+.button-lend {
+  background: -webkit-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+  background: -moz-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+  background: -ms-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+  background: -o-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+  background: linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+  color: #252525; }
+
+.button-rent {
+  background: -webkit-linear-gradient(-25deg, #ffd200 50%, #fefb00 51%);
+  background: -moz-linear-gradient(-25deg, #ffd200 50%, #fefb00 51%);
+  background: -ms-linear-gradient(-25deg, #ffd200 50%, #fefb00 51%);
+  background: -o-linear-gradient(-25deg, #ffd200 50%, #fefb00 51%);
+  background: linear-gradient(-25deg, #ffd200 50%, #fefb00 51%);
+  color: #252525; }
+
+.button-size-m {
+  height: 4rem;
+  padding: 0.5rem;
+  border: none;
+  text-align: center; }
+
+.header-wrap {
+  width: 100%;
+  height: 4.5rem;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: #252525; }
+
+.logo,
+.logo a {
+  height: 100%;
+  width: 10.1rem;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: url(../../../img/00_global/logo-home.png) no-repeat 10px center; }
+
+.header-link,
+.header-link a {
+  height: 100%;
+  width: 8rem;
+  float: right;
+  text-align: center;
+  text-decoration: none; }
+
+.header-profile {
+  line-height: 4.5rem;
+  background: -webkit-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+  background: -moz-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+  background: -ms-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+  background: -o-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+  background: linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%); }
+
+.header-search {
+  line-height: 4.5rem; }
+
+.stage,
+.stage-title,
+.stage-entries {
+  width: 100%;
+  position: absolute;
+  left: 0; }
+
+.stage {
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  background-image: url(../../../img/01_index/stage-home.jpg); }
+
+.stage-title {
+  height: 5rem;
+  top: 13.5rem;
+  text-align: center;
+  line-height: 3.2rem; }
+
+.stage-entries {
+  height: auto;
+  top: 62.5%; }
+
+.stage-specific-button-lend,
+.stage-specific-button-rent {
+  width: 25rem;
+  left: 50%;
+  top: 0;
+  margin-left: -12.5rem;
+  position: absolute; }
+
+.stage-specific-button-rent {
+  top: 6rem; }
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 62.5%;
-  color: #cccccc; }
+  background: url(../../../img/00_global/back_structure.gif);
+  font-family: Quicksand, Verdana, Geneva, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem; }
+
+html {
+  font-size: 62.5%; }

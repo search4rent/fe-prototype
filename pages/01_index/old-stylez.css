@@ -1,0 +1,198 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'quicksand';
+	src: url(Quicksand_Dash.otf) format(opentype);
+	font-weight: normal;
+}
+html {
+    font-size: 62.5%; // 16px browser default -> 10px custom default
+}
+body {
+	background: url(01_assets/back_structure.gif);
+	font-family: quicksand, Verdana, Geneva, sans-serif;	
+    font-size: 12px; // Fallback for older browsers like IE < 9
+    font-size: 1.2rem; // 12px	
+}
+
+
+/*----------------------------------------HEADER---------------------------------------*/
+.header-wrap {
+	width: 100%;
+	height: 4.5rem;
+	left: 0;
+	top: 0;
+	position: absolute;
+	background-color: #252525;
+}
+.logo,
+.logo a {
+	height: 100%;
+	width: 10.1rem;
+	left: 0;
+	top: 0;
+	position: absolute;	
+	background: url(01_assets/logo-home.png) no-repeat 10px center;	
+}
+.header-link,
+.header-link a {
+	height: 100%;
+	width: 8rem;
+	float: right;
+	text-align: center;	
+	text-decoration: none;			
+}
+.header-profile {
+	line-height: 4.5rem;
+	background: -webkit-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+	background: -moz-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+	background: -ms-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+	background: -o-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
+	background: linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);	
+}
+.header-search {
+	line-height: 4.5rem;
+}
+
+/*----------------------------------------LINKS---------------------------------------*/
+a.link-negative:link {
+	color: #fff;	
+}
+a.link-negative:visited {
+	color: #fff;	
+}
+/*----------------------------------------TYPO---------------------------------------*/
+.typo-size-xl {
+	font-size: 3.2rem;
+}
+.typo-size-l {
+	font-size: 2rem;
+}
+.typo-size-m {
+	font-size: 1.5rem;
+}
+.typo-size-s {
+	font-size: 1.3rem;
+}
+.typo-color-white {
+	color: #fff;
+}
+/*----------------------------------------SEARCH-LARGE---------------------------------------*/
+.search-l-wrap,
+.search-input {	
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;	
+	font-family: quicksand, Verdana, Geneva, sans-serif;	
+}
+.search-l-wrap {
+	width: 100%;	
+	height: 12.2rem;
+	left: 0;
+	top: 4.5rem;
+	position: absolute;
+	padding: 2.3rem;
+}
+.search-color-lend {
+	background-color: #ace502;
+}
+.search-color-rent {
+	background-color: #FEFB00;
+}
+.search-input {
+	width: 75%;	
+	height: 4rem;
+	padding: .5rem;
+	text-indent: .5rem;
+	border: 1px #252525 solid;
+	-webkit-border-radius: 3px 0 0 3px; 
+	-moz-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;	
+	color: #b4b4b4;	
+	background-color: #fff;
+	box-shadow: inset 0 1px 2px #c8c8c8;				
+}
+.input-toplabel {
+	display: block;
+	margin: 0 0 .2rem 0;
+	color: #252525;
+}
+.search-specific-button-search {
+	width: 25%;
+	margin-left: -.5rem;
+}
+/*----------------------------------------BUTTONS---------------------------------------*/
+.button-search,
+.button-lend,
+.button-rent {
+	font-family: quicksand, Verdana, Geneva, sans-serif;
+}
+.button-search {
+	background: -webkit-linear-gradient(-25deg, #0971B2 50%, #1485CC 51%);
+	background: -moz-linear-gradient(-25deg, #0971B2 50%, #1485CC 51%);
+	background: -ms-linear-gradient(-25deg, #0971B2 50%, #1485CC 51%);
+	background: -o-linear-gradient(-25deg, #0971B2 50%, #1485CC 51%);
+	background: linear-gradient(-25deg, #0971B2 50%, #1485CC 51%);
+	color: #fff;	
+}
+.button-lend {
+	background: -webkit-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+	background: -moz-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+	background: -ms-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+	background: -o-linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+	background: linear-gradient(-25deg, #9cd001 50%, #ace502 51%);
+	color: #252525;	
+}
+.button-rent {
+	background: -webkit-linear-gradient(-25deg, #ffd200 50%, #FEFB00 51%);
+	background: -moz-linear-gradient(-25deg, #ffd200 50%, #FEFB00 51%);
+	background: -ms-linear-gradient(-25deg, #ffd200 50%, #FEFB00 51%);
+	background: -o-linear-gradient(-25deg, #ffd200 50%, #FEFB00 51%);
+	background: linear-gradient(-25deg, #ffd200 50%, #FEFB00 51%);
+	color: #252525;	
+}
+.button-size-m {
+	height: 4rem;
+	padding: .5rem;
+	border: none;
+	text-align: center;
+}
+
+/*----------------------------------------STAGE---------------------------------------*/
+.stage,
+.stage-title,
+.stage-entries {
+	width: 100%;
+	position: absolute;	
+	left: 0;	
+}
+.stage {
+	height: 100%;
+	top: 0;
+	z-index: -1;
+	background-image: url(01_assets/stage-home.jpg);
+}
+.stage-title {
+	height: 5rem;
+	top: 13.5rem;
+	text-align: center;
+	line-height: 3.2rem;
+}
+.stage-entries {
+	height: auto;
+	top: 62.5%;
+	background-color: #f00;
+}
+.stage-specific-button-lend, 
+.stage-specific-button-rent {
+	width: 25rem;
+	left: 50%;
+	top: 0;
+	margin-left: -12.5rem;
+	position: absolute;	
+}
+.stage-specific-button-rent {
+	top: 6rem;
+}

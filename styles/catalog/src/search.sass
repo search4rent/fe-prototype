@@ -1,28 +1,43 @@
-.search-field
-    border: 2px solid $primary-color
-    padding: 0.5rem 0 0.5rem 0
-    font-size: 0.5em
-    line-height: 1
-    border-radius: 2px
+.search-l-wrap,
+.search-input  
+    webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box 
+    font-family: $primary-font   
 
-.search-submit
-    font-size: 1em
-    line-height: 1
-    background: $secondary-color
-    border: none
-    border-radius: 3px
-    color: $tertiary-color
-
-.search-suggest
-    border: 2px solid $primary-color
-    background: $tertiary-color
-    font-size: 0.5em
+.search-l-wrap 
+    width: 100%    
+    height: 12.2rem
+    left: 0
+    top: 4.5rem
     position: absolute
-    display: none
+    padding: 2.3rem
 
-.search-item--active
-    background: $secondary-color
-    color: $tertiary-color
+.search-color-lend 
+    background-color: $lend-primary-color
 
-.search
-    font-size: 2rem
+.search-color-rent 
+    background-color: $rent-primary-color
+
+.search-input 
+    width: 75% 
+    height: 4rem
+    padding: .5rem
+    text-indent: .5rem
+    border: 1px $anthrazit solid
+    -webkit-border-radius: 3px 0 0 3px 
+    -moz-border-radius: 3px 0 0 3px
+    border-radius: 3px 0 0 3px 
+    color: #b4b4b4 
+    background-color: #fff
+    box-shadow: inset 0 1px 2px #c8c8c8                
+
+.input-toplabel 
+    display: block
+    margin: 0 0 0.2rem 0
+    color: $anthrazit
+
+.search-specific-button-search 
+    width: 25%
+    margin-left: -0.5rem
