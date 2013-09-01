@@ -9,17 +9,17 @@
     </head>
 
     <body>
-        
-        <div ng-controller="MainController">
-            <a href="/home">HOME</a><br/>
-            <a href="/items">Items</a><br/>
-            <a href="/item/123">Item 123</a><br/>
-            <a href="/item">New Item</a><br/>
-            <a href="/user/123">User 123</a><br/>
+
+        <!-- <div class="search s-all" ng-controller="SearchController">
+            <form ng-submit="search()">
+                <input suggest-search class="s1-s3 search-field" type="search" ng-model="query" placeholder="Search term..." />
+                <button type="submit" class="s4 search-submit iconic magnifying_glass"></button>
+                <div class="search-suggest">
+                    <div ng-repeat="hit in hits" class="search-item" ng-click="search( $index )">{{hit}}</div>
+                </div>
+            </div>
         </div>
-
-        <div ng-view></div>
-
+ -->
         <script src="bower_components/jquery/jquery.min.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
