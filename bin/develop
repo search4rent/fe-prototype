@@ -4,4 +4,4 @@
 cd "$(dirname "$0")"
 cd ..
 
-sass --watch styles/catalog/src/main.sass:styles/catalog/dist/main.css & serve --compress .
+sass --watch styles/catalog/src/main.sass:styles/catalog/dist/main.css & node server.js

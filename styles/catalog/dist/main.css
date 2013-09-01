@@ -102,9 +102,13 @@ a.link-negative:visited {
 
 .stage {
   height: 100%;
-  top: 0;
+  top: -4.5rem;
   z-index: -1;
-  background-image: url(../../../img/01_index/stage-home.jpg); }
+  background-image: url(../../../img/01_index/stage-home.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .stage-title {
   height: 5rem;
