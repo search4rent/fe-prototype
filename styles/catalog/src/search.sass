@@ -1,18 +1,60 @@
-.search-l-wrap,
-.search-input  
+.search-l-wrap-lend,
+.search-l-wrap-rent,
+.search-input,
+.search-l-field,
+.search-l-entry  
     webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     -ms-box-sizing: border-box
     box-sizing: border-box 
     font-family: $primary-font   
 
-.search-l-wrap 
-    width: 100%    
-    height: 12.2rem
+.search-l-wrap-lend,
+.search-l-wrap-rent  
+    width: 100%
+    position: absolute 
+    height: 50%
     left: 0
-    top: 4.5rem
-    position: absolute
-    padding: 2.3rem
+    z-index: -1
+
+.search-l-wrap-rent
+    top: 0
+
+.search-l-wrap-lend
+    top: 50%   
+
+.search-l-field,
+.search-l-entry
+    width: 100%
+    position: absolute 
+    height: 8rem
+    top: 50%
+    margin-top: -4rem    
+    padding: 2.5rem    
+
+.search-l-entry
+    margin-top: -8rem
+
+.search-l-picture-rent
+    background: url(../../../img/01_index/home-rent.jpg) no-repeat center center
+
+.search-l-picture-lend
+    background: url(../../../img/01_index/home-lend.jpg) no-repeat center center
+
+.search-l-picture-rent,
+.search-l-picture-lend
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.search-l-button
+    width: 65%
+    top: 0
+
+.search-l-title 
+    line-height: 2.5rem
+    margin-bottom: 1.6rem
 
 .search-color-lend 
     background-color: $lend-primary-color
