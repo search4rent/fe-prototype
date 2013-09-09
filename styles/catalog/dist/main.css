@@ -57,6 +57,92 @@ a.link-negative:visited {
   border: none;
   text-align: center; }
 
+.search-l-wrap-lend,
+.search-l-wrap-rent,
+.search-input,
+.search-l-field,
+.search-l-entry {
+  webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Quicksand, Verdana, Geneva, Arial, sans-serif; }
+
+.search-l-wrap-lend,
+.search-l-wrap-rent {
+  width: 100%;
+  position: absolute;
+  height: 50%;
+  left: 0;
+  z-index: -1; }
+
+.search-l-wrap-rent {
+  top: 0; }
+
+.search-l-wrap-lend {
+  top: 50%; }
+
+.search-l-field,
+.search-l-entry {
+  width: 100%;
+  position: absolute;
+  height: 8rem;
+  top: 50%;
+  margin-top: -4rem;
+  padding: 2.5rem; }
+
+.search-l-entry {
+  margin-top: -8rem; }
+
+.search-l-picture-rent {
+  background: url(../../../img/01_index/home-rent.jpg) no-repeat center center; }
+
+.search-l-picture-lend {
+  background: url(../../../img/01_index/home-lend.jpg) no-repeat center center; }
+
+.search-l-picture-rent,
+.search-l-picture-lend {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.search-l-button {
+  width: 65%;
+  top: 0; }
+
+.search-l-title {
+  line-height: 2.5rem;
+  margin-bottom: 1.6rem; }
+
+.search-color-lend {
+  background-color: #ace502; }
+
+.search-color-rent {
+  background-color: #fefb00; }
+
+.search-input {
+  width: 75%;
+  height: 4rem;
+  padding: 0.5rem;
+  text-indent: 0.5rem;
+  border: 1px #252525 solid;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  color: #b4b4b4;
+  background-color: white;
+  box-shadow: inset 0 1px 2px #c8c8c8; }
+
+.input-toplabel {
+  display: block;
+  margin: 0 0 0.2rem 0;
+  color: #252525; }
+
+.search-specific-button-search {
+  width: 25%;
+  margin-left: -0.5rem; }
+
 .header-wrap {
   width: 100%;
   height: 4.5rem;
@@ -92,44 +178,6 @@ a.link-negative:visited {
 
 .header-search {
   line-height: 4.5rem; }
-
-.stage,
-.stage-title,
-.stage-entries {
-  width: 100%;
-  position: absolute;
-  left: 0; }
-
-.stage {
-  height: 100%;
-  top: 0;
-  z-index: -1;
-  background: url(../../../img/01_index/stage-home.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.stage-title {
-  height: 5rem;
-  top: 13.5rem;
-  text-align: center;
-  line-height: 3.2rem; }
-
-.stage-entries {
-  height: auto;
-  top: 62.5%; }
-
-.stage-specific-button-lend,
-.stage-specific-button-rent {
-  width: 25rem;
-  left: 50%;
-  top: 0;
-  margin-left: -12.5rem;
-  position: absolute; }
-
-.stage-specific-button-rent {
-  top: 6rem; }
 
 body {
   background: url(../../../img/00_global/back_structure.gif);
