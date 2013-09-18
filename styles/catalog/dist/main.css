@@ -1,3 +1,9 @@
+.color-lend {
+  background-color: #ace502; }
+
+.color-rent {
+  background-color: #fefb00; }
+
 @font-face {
   font-family: "Quicksand";
   src: url(../../fonts/quicksand/Quicksand_Book.otf) format(opentype);
@@ -27,6 +33,12 @@
 a.link-negative:link,
 a.link-negative:visited {
   color: white; }
+
+.icon-size-xl {
+  font-size: 3.2rem; }
+
+.icon-size-l {
+  font-size: 2rem; }
 
 .button-search,
 .button-lend,
@@ -136,12 +148,6 @@ a.link-negative:visited {
   line-height: 1.9rem;
   margin-bottom: 1.2rem; }
 
-.search-color-lend {
-  background-color: #ace502; }
-
-.search-color-rent {
-  background-color: #fefb00; }
-
 .search-input {
   width: 75%;
   height: 4rem;
@@ -190,13 +196,13 @@ a.link-negative:visited {
 .header-link,
 .header-link a {
   height: 100%;
-  width: 8rem;
+  line-height: 4.5rem;
   float: right;
   text-align: center;
   text-decoration: none; }
 
 .header-profile {
-  line-height: 4.5rem;
+  width: 8rem;
   background: -webkit-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
   background: -moz-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
   background: -ms-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
@@ -204,7 +210,14 @@ a.link-negative:visited {
   background: linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%); }
 
 .header-search {
-  line-height: 4.5rem; }
+  width: 4.5rem;
+  color: #252525; }
+
+.header-search-lend {
+  color: #ace502; }
+
+.header-search-rent {
+  color: #fefb00; }
 
 .list-wrap {
   width: 100%;
