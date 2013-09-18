@@ -27,18 +27,18 @@
 .typo-color-anthrazit {
   color: #252525; }
 
-.typo-color-grey {
+.typo-color-grey03 {
   color: #b4b4b4; }
+
+.typo-color-lend {
+  color: #ace502; }
+
+.typo-color-rent {
+  color: #fefb00; }
 
 a.link-negative:link,
 a.link-negative:visited {
   color: white; }
-
-.icon-size-xl {
-  font-size: 3.2rem; }
-
-.icon-size-l {
-  font-size: 2rem; }
 
 .button-search,
 .button-lend,
@@ -193,31 +193,17 @@ a.link-negative:visited {
   position: absolute;
   background: url(../../../img/00_global/logo-home.png) no-repeat 10px center; }
 
-.header-link,
-.header-link a {
+.header-link {
+  height: 100%; }
+
+.header-link a,
+.header-link div {
   height: 100%;
+  width: 4.5rem;
   line-height: 4.5rem;
   float: right;
   text-align: center;
   text-decoration: none; }
-
-.header-profile {
-  width: 4.5rem;
-  background: -webkit-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
-  background: -moz-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
-  background: -ms-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
-  background: -o-linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%);
-  background: linear-gradient(-25deg, #2f2f2f 50%, #3a3a3a 51%); }
-
-.header-search {
-  width: 4.5rem;
-  color: #252525; }
-
-.header-search-lend {
-  color: #ace502; }
-
-.header-search-rent {
-  color: #fefb00; }
 
 .list-wrap {
   width: 100%;
@@ -228,8 +214,8 @@ a.link-negative:visited {
 body {
   background: url(../../../img/00_global/back_structure.gif);
   font-family: Quicksand, Verdana, Geneva, Arial, sans-serif;
-  font-size: 12px;
-  font-size: 1.2rem; }
+  font-size: 13px;
+  font-size: 1.3rem; }
 
 html {
   font-size: 62.5%; }
