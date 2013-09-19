@@ -12,17 +12,35 @@ angular.module( "randl.controllers" ).controller( "MainController", function ( $
     $scope.$routeParams = $routeParams;
 });
 
-angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {
+angular.module( "randl.controllers" ).controller( "ItemsController", function ( ) {
+    console.log( "items" );
+});
 
-    $routeProvider.when( "/", {
-        templateUrl: "views/rent.html",
-        controller: "HomeController"
-    });
+angular.module( "randl.controllers" ).controller( "LendController", function () {
+    $( "html" ).removeClass( "rent" );
+    $( "html" ).addClass( "lend" );
+});
+
+angular.module( "randl.controllers" ).controller( "RentController", function () {
+    $( "html" ).removeClass( "lend" );
+    $( "html" ).addClass( "rent" );
+});
+
+angular.module( "randl.controllers" ).controller( "UserController", function () {
+    console.log( "user" );
+});
+
+angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {
 
     $routeProvider.when( "/lend", {
         templateUrl: "views/lend.html",
-        controller: "HomeController"
-    });    
+        controller: "LendController"
+    });
+
+    $routeProvider.when( "/", {
+        templateUrl: "views/rent.html",
+        controller: "RentController"
+    });
 
     $routeProvider.when( "/items/lend", {
         templateUrl: "/views/items-lend.html",
@@ -41,22 +59,5 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
 
     $locationProvider.html5Mode( true );
 });
-
-angular.module( "randl.controllers" ).controller( "ItemsController", function ( ) {
-    console.log( "items" );
-});
-
-angular.module( "randl.controllers" ).controller( "ItemController", function ( ) {
-    console.log( "item" );
-});
-
-angular.module( "randl.controllers" ).controller( "HomeController", function () {
-    console.log( "home" );
-});
-
-angular.module( "randl.controllers" ).controller( "UserController", function () {
-    console.log( "user" );
-});
-
 
 }());
