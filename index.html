@@ -11,20 +11,19 @@
 
     <body>
         
-        <div ng-controller="MainController">
-            <div class="header-wrap">
-                <div class="logo logo-home">
-                    <a href="/"></a>      
+        <div ng-controller="MainController" class="s-all">
+            <div class="header-wrap s-all">
+                <div class="s1-s2">
+                    <a class="button-menu" href="/">
+                        <span class='iconic list'></span>
+                    </a>                         
                 </div>                
-                <div class="header-link">
-                    <a href="/user/123">
-                        <span class='iconic user typo-size-l typo-color-white'></span>
+                <div class="header-link s3-s4">
+                    <a class="button-rent-search" href="/">
+                        <span class='iconic magnifying_glass'></span>
                     </a>
-                    <a class="color-rent" href="/">
-                        <span class='iconic download typo-size-xl typo-color-anthrazit'></span>
-                    </a>
-                    <a href="/lend">
-                        <span class='iconic upload typo-size-l typo-color-lend'></span>
+                    <a class="button-lend-search" href="/lend">
+                        <span class='iconic magnifying_glass'></span>
                     </a>        
                 </div>                 
             </div>
@@ -35,7 +34,7 @@
             <a href="/user/123">User 123</a><br/> -->
         </div>
 
-        <div ng-view></div>
+        <div ng-view class="s-all"></div>
 
         <script src="/assets/scripts/lib/all.js"></script>
         <script src="/assets/scripts/src/main.js"></script>

@@ -1,7 +1,7 @@
-.color-lend {
+.color-lend, .lend .button-lend-search {
   background-color: #ace502; }
 
-.color-rent {
+.color-rent, .rent .button-rent-search {
   background-color: #fefb00; }
 
 @font-face {
@@ -9,10 +9,10 @@
   src: url(../../fonts/quicksand/Quicksand_Book.otf) format(opentype);
   font-weight: normal; }
 
-.typo-size-xl {
+.typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu {
   font-size: 3.2rem; }
 
-.typo-size-l {
+.typo-size-l, .rent .button-lend-search, .lend .button-rent-search {
   font-size: 2rem; }
 
 .typo-size-m {
@@ -21,19 +21,19 @@
 .typo-size-s {
   font-size: 1.3rem; }
 
-.typo-color-white {
+.typo-color-white, .button-menu {
   color: white; }
 
-.typo-color-anthrazit {
+.typo-color-anthrazit, .rent .button-rent-search, .lend .button-lend-search {
   color: #252525; }
 
 .typo-color-grey03 {
   color: #b4b4b4; }
 
-.typo-color-lend {
+.typo-color-lend, .rent .button-lend-search {
   color: #ace502; }
 
-.typo-color-rent {
+.typo-color-rent, .lend .button-rent-search {
   color: #fefb00; }
 
 a.link-negative:link,
@@ -91,7 +91,8 @@ a.link-negative:visited {
 .search-l-wrap-lend,
 .search-l-wrap-rent,
 .search-s-wrap,
-.search-s-border {
+.search-s-border-rent,
+.search-s-border-lend {
   width: 100%;
   position: absolute;
   left: 0;
@@ -128,17 +129,12 @@ a.link-negative:visited {
   text-align: center; }
 
 .search-l-picture-rent {
-  background: url(../../../img/01_index/home-rent.jpg) no-repeat center center; }
-
-.search-l-picture-lend {
-  background: url(../../../img/01_index/border.png) repeat-x top left;
+  background: url(../../../img/01_index/border_rent.png) repeat-x top left;
   background-color: #2f2f2f; }
 
-.search-l-picture-rent {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+.search-l-picture-lend {
+  background: url(../../../img/01_index/border_lend.png) repeat-x top left;
+  background-color: #2f2f2f; }
 
 .search-l-button {
   width: 65%;
@@ -169,41 +165,51 @@ a.link-negative:visited {
   width: 25%;
   margin-left: -0.5rem; }
 
-.search-s-border {
+.search-s-border-rent,
+.search-s-border-lend {
   width: 100%;
   height: 1.5rem;
   left: 0;
-  top: 8rem;
-  background: url(../../../img/01_index/border.png) repeat-x top left; }
+  top: 8rem; }
+
+.search-s-border-rent {
+  background: url(../../../img/01_index/border_rent.png) repeat-x top left; }
+
+.search-s-border-lend {
+  background: url(../../../img/01_index/border_lend.png) repeat-x top left; }
 
 .header-wrap {
   width: 100%;
   height: 4.5rem;
-  left: 0;
-  top: 0;
-  position: absolute;
   background-color: #252525; }
 
 .logo,
 .logo a {
   height: 100%;
-  width: 10.1rem;
-  left: 0;
-  top: 0;
-  position: absolute;
+  width: 5.5rem;
   background: url(../../../img/00_global/logo-home.png) no-repeat 10px center; }
 
 .header-link {
   height: 100%; }
 
-.header-link a,
-.header-link div {
+.header-link a {
   height: 100%;
   width: 4.5rem;
   line-height: 4.5rem;
-  float: right;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  display: block;
+  float: right; }
+
+.rent .button-rent-search {
+  background-color: #fefb00; }
+
+.lend .button-lend-search {
+  background-color: #ace502; }
+
+.button-menu {
+  line-height: 4.5rem;
+  margin-left: 1rem; }
 
 .list-wrap {
   width: 100%;
@@ -211,11 +217,18 @@ a.link-negative:visited {
   left: 0;
   top: 14rem; }
 
+.item-wrap {
+  width: 100%;
+  height: 10rem;
+  left: 0;
+  background-color: white; }
+
 body {
   background: url(../../../img/00_global/back_structure.gif);
   font-family: Quicksand, Verdana, Geneva, Arial, sans-serif;
   font-size: 13px;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  margin: 0; }
 
 html {
   font-size: 62.5%; }

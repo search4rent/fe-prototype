@@ -1,29 +1,48 @@
 .header-wrap 
-	width: 100%
-	height: 4.5rem
-	left: 0
-	top: 0
-	position: absolute
-	background-color: $anthrazit
+    width: 100%
+    height: 4.5rem
+    background-color: $anthrazit
 
 .logo,
 .logo a 
-	height: 100%
-	width: 10.1rem
-	left: 0
-	top: 0
-	position: absolute	
-	background: url(../../../img/00_global/logo-home.png) no-repeat 10px center	
+    height: 100%
+    width: 5.5rem 
+    background: url(../../../img/00_global/logo-home.png) no-repeat 10px center 
 
 .header-link
-	height: 100%
+    height: 100%
 
-.header-link a,
-.header-link div
-	height: 100%
-	width: 4.5rem		
-	line-height: 4.5rem	
-	float: right
-	text-align: center
-	text-decoration: none	
-		
+.header-link a
+    height: 100%
+    width: 4.5rem       
+    line-height: 4.5rem 
+    text-align: center
+    text-decoration: none
+    display: block
+    float: right
+
+.rent .button-rent-search
+    background-color: $rent-primary-color
+    @extend .color-rent
+    @extend .typo-size-xl
+    @extend .typo-color-anthrazit
+
+.rent .button-lend-search
+    @extend .typo-size-l 
+    @extend .typo-color-lend
+
+.lend .button-lend-search
+    background-color: $lend-primary-color
+    @extend .color-lend         
+    @extend .typo-size-xl
+    @extend .typo-color-anthrazit        
+
+.lend .button-rent-search
+    @extend .typo-size-l 
+    @extend .typo-color-rent       
+        
+.button-menu
+    line-height: 4.5rem
+    margin-left: 1rem
+    @extend .typo-size-xl
+    @extend .typo-color-white     
