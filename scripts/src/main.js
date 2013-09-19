@@ -15,23 +15,23 @@ angular.module( "randl.controllers" ).controller( "MainController", function ( $
 angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {
 
     $routeProvider.when( "/", {
-        templateUrl: "views/home.html",
+        templateUrl: "views/rent.html",
         controller: "HomeController"
     });
 
-    $routeProvider.when( "/items", {
-        templateUrl: "/views/items.html",
+    $routeProvider.when( "/lend", {
+        templateUrl: "views/lend.html",
+        controller: "HomeController"
+    });    
+
+    $routeProvider.when( "/items/lend", {
+        templateUrl: "/views/items-lend.html",
         controller: "ItemsController"
     });
 
-    $routeProvider.when( "/item/:id", {
-        templateUrl: "/views/item.html",
-        controller: "ItemController"
-    });
-
-    $routeProvider.when( "/item", {
-        templateUrl: "/views/item.html",
-        controller: "ItemController"
+    $routeProvider.when( "/items/rent", {
+        templateUrl: "/views/items-rent.html",
+        controller: "ItemsController"
     });
 
     $routeProvider.when( "/user/:id", {
