@@ -10,31 +10,35 @@
     </head>
 
     <body>
-        
-        <div ng-controller="MainController" class="s-all">
-            <div class="header-wrap s-all">
-                <div class="s1-s2">
-                    <a class="button-menu" href="/">
-                        <span class='iconic list'></span>
-                    </a>                         
-                </div>                
-                <div class="header-link s3-s4">
-                    <a class="button-rent-search" href="/">
-                        <span class='iconic magnifying_glass'></span>
-                    </a>
-                    <a class="button-lend-search" href="/lend">
-                        <span class='iconic magnifying_glass'></span>
-                    </a>        
-                </div>                 
-            </div>
-            <!-- <a href="/home">HOME</a><br/>
-            <a href="/items">Items</a><br/>
-            <a href="/item/123">Item 123</a><br/>
-            <a href="/item">New Item</a><br/>
-            <a href="/user/123">User 123</a><br/> -->
-        </div>
 
-        <div ng-view class="s-all"></div>
+        <nav class="main">
+            <ul>
+                <li>Messages</li>
+                <li>Profile</li>
+            </ul>
+        </nav>
+    
+        <div class="content">    
+            <div ng-controller="MainController" class="s-all">
+                <div class="header-wrap s-all">
+                    <div class="s1-s2">
+                        <a class="button-menu" href="#" ng-click="toggleNav()">
+                            <span class='iconic list'></span>
+                        </a>                         
+                    </div>                
+                    <div class="header-link s3-s4">
+                        <a class="button-rent-search" href="/">
+                            <span class='iconic magnifying_glass'></span>
+                        </a>
+                        <a class="button-lend-search" href="/lend">
+                            <span class='iconic magnifying_glass'></span>
+                        </a>        
+                    </div>                 
+                </div>
+            </div>
+
+            <div ng-view class="s-all"></div>
+        </div>
 
         <script src="/assets/scripts/lib/all.js"></script>
         <script src="/assets/scripts/src/main.js"></script>

@@ -223,6 +223,12 @@ a.link-negative:visited {
   left: 0;
   background-color: white; }
 
+nav.main {
+  display: none; }
+
+nav.main.active {
+  display: block; }
+
 body {
   background: url(../../../img/00_global/back_structure.gif);
   font-family: Quicksand, Verdana, Geneva, Arial, sans-serif;

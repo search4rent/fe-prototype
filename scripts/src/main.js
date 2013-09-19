@@ -7,6 +7,11 @@ angular.module( "randl.controllers", [] );
 angular.module( "randl", [ "randl.directive", "randl.controllers", "randl.routes" ] );
 
 angular.module( "randl.controllers" ).controller( "MainController", function ( $scope, $route, $routeParams, $location ) {
+
+    $scope.toggleNav = function () {
+        $( "nav.main" ).toggleClass( "active" );
+    };
+
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
@@ -32,14 +37,14 @@ angular.module( "randl.controllers" ).controller( "UserController", function () 
 
 angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {
 
-    $routeProvider.when( "/lend", {
-        templateUrl: "views/lend.html",
-        controller: "LendController"
-    });
-
     $routeProvider.when( "/", {
         templateUrl: "views/rent.html",
         controller: "RentController"
+    });
+
+    $routeProvider.when( "/lend", {
+        templateUrl: "views/lend.html",
+        controller: "LendController"
     });
 
     $routeProvider.when( "/items/lend", {
