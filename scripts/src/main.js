@@ -49,12 +49,12 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
 
     $routeProvider.when( "/items/lend", {
         templateUrl: "/views/items-lend.html",
-        controller: "ItemsController"
+        controller: "LendController"
     });
 
     $routeProvider.when( "/items/rent", {
         templateUrl: "/views/items-rent.html",
-        controller: "ItemsController"
+        controller: "RentController"
     });
 
     $routeProvider.when( "/user/:id", {
