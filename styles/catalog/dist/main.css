@@ -12,7 +12,7 @@
 .typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu {
   font-size: 3.2rem; }
 
-.typo-size-l, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline {
+.typo-size-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline {
   font-size: 2rem; }
 
 .typo-size-m {
@@ -30,10 +30,10 @@
 .typo-color-grey03 {
   color: #b4b4b4; }
 
-.typo-color-lend, .rent .button-lend-search {
+.typo-color-lend, .button-lend-search, .rent .button-lend-search {
   color: #ace502; }
 
-.typo-color-rent, .lend .button-rent-search {
+.typo-color-rent, .button-rent-search, .lend .button-rent-search {
   color: #fefb00; }
 
 .typo-color-blue, .list-item-headline {
@@ -213,7 +213,6 @@ a.link-negative:visited {
 .list-wrap {
   width: 100%;
   z-index: -9;
-  margin-top: 2rem;
   position: relative; }
 
 .list-item-wrap,
@@ -221,7 +220,8 @@ a.link-negative:visited {
   width: 100%;
   height: 13rem;
   background: white;
-  text-decoration: none; }
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 #c8c8c8; }
 
 .list-item-wrap a {
   display: block; }
@@ -244,7 +244,9 @@ a.link-negative:visited {
 
 .list-item-headline {
   height: auto;
-  line-height: 2.3rem; }
+  max-height: 4.7rem;
+  line-height: 2.3rem;
+  text-overflow: ellipsis; }
 
 .list-item-place {
   height: 2.5rem;
@@ -252,8 +254,10 @@ a.link-negative:visited {
 
 .list-item-price {
   height: 3.8rem;
-  line-height: 4.5rem;
-  bottom: 0; }
+  line-height: 4.5rem; }
+
+.text-wrap {
+  height: 7.2rem; }
 
 nav.main {
   display: none; }
