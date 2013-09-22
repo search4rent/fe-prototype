@@ -1,9 +1,9 @@
 <div class="search-l-wrap-rent color-lend">  
-    <div class="search-l-field">         
+    <form class="search-l-field" ng-submit="submit()">         
         <label for="lend" class="typo-size-l input-toplabel">I can lend a...</label>                      
-        <input name="lend" type="text" value="e.g. playstation, boat" class="typo-size-m typo-color-grey03 search-input"/>
-        <input type="submit" onclick="window.location='/items/lend';" value="Lend" class="typo-size-m button-size-m button-search search-specific-button-search"/>
-    </div>
+        <input name="lend" ng-model="query" type="text" placeholder="e.g. playstation, boat" class="typo-size-m typo-color-grey03 search-input"/>
+        <input type="submit" value="Lend" class="typo-size-m button-size-m button-search search-specific-button-search"/>
+    </form>
 </div> 
 <div class="search-l-wrap-lend search-l-picture-lend">  
     <div class="search-l-entry">         

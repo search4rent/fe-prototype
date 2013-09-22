@@ -1,5 +1,15 @@
 ( function ( ) {
 
+function activateRent () {
+    $( "html" ).removeClass( "lend" );
+    $( "html" ).addClass( "rent" );
+}
+
+function activateLend () {
+    $( "html" ).removeClass( "rent" );
+    $( "html" ).addClass( "lend" );
+}
+
 angular.module( "randl.directive", [] );
 angular.module( "randl.routes", [] );
 angular.module( "randl.controllers", [] );
@@ -13,22 +23,33 @@ angular.module( "randl.controllers" ).controller( "MainController", function ( $
     };
 
     $scope.$route = $route;
-    $scope.$location = $location;
     $scope.$routeParams = $routeParams;
 });
 
-angular.module( "randl.controllers" ).controller( "ItemsController", function ( ) {
-    console.log( "items" );
+angular.module( "randl.controllers" ).controller( "LendItemsController", function ( $scope, $routeParams ) {
+    activateLend();
+    $scope.query = $routeParams.q;
 });
 
-angular.module( "randl.controllers" ).controller( "LendController", function () {
-    $( "html" ).removeClass( "rent" );
-    $( "html" ).addClass( "lend" );
+angular.module( "randl.controllers" ).controller( "RentItemsController", function ( $scope, $routeParams ) {
+    activateRent();
+    $scope.query = $routeParams.q;
 });
 
-angular.module( "randl.controllers" ).controller( "RentController", function () {
-    $( "html" ).removeClass( "lend" );
-    $( "html" ).addClass( "rent" );
+angular.module( "randl.controllers" ).controller( "LendController", function ( $scope, $location ) {
+    activateLend();
+
+    $scope.submit = function () {
+        $location.url( "/items/lend?q=" + this.query );
+    };
+});
+
+angular.module( "randl.controllers" ).controller( "RentController", function ( $scope, $location ) {
+    activateRent();
+
+    $scope.submit = function () {
+        $location.url( "/items/rent?q=" + this.query );
+    };
 });
 
 angular.module( "randl.controllers" ).controller( "UserController", function () {
@@ -49,12 +70,12 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
 
     $routeProvider.when( "/items/lend", {
         templateUrl: "/views/items-lend.html",
-        controller: "LendController"
+        controller: "LendItemsController"
     });
 
     $routeProvider.when( "/items/rent", {
         templateUrl: "/views/items-rent.html",
-        controller: "RentController"
+        controller: "RentItemsController"
     });
 
     $routeProvider.when( "/user/:id", {
