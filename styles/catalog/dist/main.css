@@ -24,7 +24,7 @@
 .typo-color-white, .button-menu {
   color: white; }
 
-.typo-color-anthrazit, .rent .button-rent-search, .lend .button-lend-search, .list-item-place, .list-item-price {
+.typo-color-anthrazit, .rent .button-rent-search, .lend .button-lend-search, .list-item-place {
   color: #252525; }
 
 .typo-color-grey03 {
@@ -38,6 +38,9 @@
 
 .typo-color-blue, .list-item-headline {
   color: #1485cc; }
+
+.typo-color-orange, .list-item-price {
+  color: #eb8004; }
 
 a.link-negative:link,
 a.link-negative:visited {
@@ -240,7 +243,7 @@ a.link-negative:visited {
   box-sizing: border-box; }
 
 .list-item-headline {
-  height: 4.7rem;
+  height: auto;
   line-height: 2.3rem; }
 
 .list-item-place {
@@ -250,7 +253,7 @@ a.link-negative:visited {
 .list-item-price {
   height: 3.8rem;
   line-height: 4.5rem;
-  color: #eb8004; }
+  bottom: 0; }
 
 nav.main {
   display: none; }
