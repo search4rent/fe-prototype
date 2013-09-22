@@ -1,29 +1,50 @@
 .list-wrap
     width: 100%
     z-index: -9
+    margin-top: 2rem
     position: relative
 
-.list-item-wrap
+.list-item-wrap,
+.list-item-wrap a
     width: 100%
-    height: 12rem
-    box-shadow: inset 0 -1px 0 $grey04
+    height: 13rem
+    background: $white
+    text-decoration: none
+
+.list-item-wrap a 
+    display: block  
 
 .list-item-picture
-    width: 12rem
-    height: 12rem
+    width: 13rem
+    height: 13rem
     float: left
-    background-color: $grey03
+    background: url(../../../img/temp_ps4.jpg) no-repeat
+    background-size: cover
 
 .list-item-content
-    margin-left: 12rem
-    height: 12rem
-
-.list-item-headline
-    height: 6rem
-    padding: 1rem
-    @extend .typo-size-l
-    line-height: 2.3rem
+    margin-left: 13rem
+    height: 13rem
+    padding: 1rem    
     webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     -ms-box-sizing: border-box
     box-sizing: border-box     
+
+.list-item-headline
+    @extend .typo-size-l
+    @extend .typo-color-blue
+    height: 4.7rem
+    line-height: 2.3rem
+
+.list-item-place
+    @extend .typo-size-s
+    @extend .typo-color-anthrazit    
+    height: 2.5rem
+    line-height: 2.3rem   
+
+.list-item-price
+    @extend .typo-size-s
+    @extend .typo-color-anthrazit     
+    height: 3.8rem
+    line-height: 4.5rem
+    color: $orange
