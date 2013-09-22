@@ -31,7 +31,7 @@ angular.module( "randl.controllers" ).controller( "LendItemsController", functio
     $scope.query = $routeParams.q;
 });
 
-angular.module( "randl.controllers" ).controller( "RentItemsController", function ( $scope, $routeParams, $http ) {
+angular.module( "randl.controllers" ).controller( "RentItemsController", function ( $scope, $routeParams, $location, $http ) {
     activateRent();
     $scope.query = $routeParams.q;
 
@@ -49,7 +49,7 @@ angular.module( "randl.controllers" ).controller( "RentItemsController", functio
     search( $routeParams.q );
 
     $scope.submit = function () {
-        search( $scope.query );
+        $location.search("q", $scope.query );
     };
 });
 
