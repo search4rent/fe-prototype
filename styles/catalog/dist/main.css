@@ -12,7 +12,7 @@
 .typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu {
   font-size: 3.2rem; }
 
-.typo-size-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline {
+.typo-size-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .active ul {
   font-size: 2rem; }
 
 .typo-size-m {
@@ -24,7 +24,7 @@
 .typo-color-white, .button-menu {
   color: white; }
 
-.typo-color-anthrazit, .rent .button-rent-search, .lend .button-lend-search, .list-item-place {
+.typo-color-anthrazit, .rent .button-rent-search, .lend .button-lend-search, .list-item-place, .active a {
   color: #252525; }
 
 .typo-color-grey03 {
@@ -96,17 +96,12 @@ a.link-negative:visited {
 
 .search-l-wrap-lend,
 .search-l-wrap-rent {
-  width: 100%;
-  position: absolute;
-  left: 0;
   z-index: -1; }
 
 .search-l-wrap-rent {
-  top: 0;
   height: 61.5%; }
 
 .search-l-wrap-lend {
-  top: 61.5%;
   height: 38.5%; }
 
 .search-s-wrap {
@@ -117,7 +112,7 @@ a.link-negative:visited {
 .search-l-field,
 .search-l-entry {
   width: 100%;
-  position: absolute;
+  position: relative;
   height: 8rem;
   top: 50%;
   margin-top: -3.5rem;
@@ -246,7 +241,7 @@ a.link-negative:visited {
   height: auto;
   max-height: 4.7rem;
   line-height: 2.3rem;
-  text-overflow: ellipsis; }
+  overflow: hidden; }
 
 .list-item-place {
   height: 2.5rem;
@@ -264,6 +259,45 @@ nav.main {
 
 nav.main.active {
   display: block; }
+
+.content {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -99; }
+
+.active {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.active ~ .content {
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transform: translateX(20rem) translateY(10rem);
+  -moz-transform: translateX(20rem) translateY(10rem);
+  -o-transform: translateX(20rem) translateY(10rem);
+  transform: translateX(20rem) translateY(10rem);
+  -webkit-filter: brightness(0.2);
+  -moz-filter: brightness(0.2);
+  -o-filter: brightness(0.2);
+  z-index: 2; }
+
+.active ~ .content .content-wrap-absolute {
+  height: 56.8rem; }
+
+.active ul {
+  list-style: none;
+  line-height: 5rem;
+  text-indent: -2rem; }
+
+.active a {
+  text-decoration: none; }
 
 body {
   background: url(../../../img/00_global/back_structure.gif);

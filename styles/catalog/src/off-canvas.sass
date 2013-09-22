@@ -3,3 +3,45 @@ nav.main
 
 nav.main.active
     display: block
+
+.content
+    height: 100%
+    position: absolute
+    top: 0
+    z-index: -99
+
+.active
+    padding: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%   
+
+.active ~.content
+    transition: .5s
+    -moz-transition: .5s
+    -webkit-transition: .5s
+    -o-transition: .5s
+    -webkit-transform: translateX(20rem) translateY(10rem)
+    -moz-transform: translateX(20rem) translateY(10rem)
+    -o-transform: translateX(20rem) translateY(10rem)
+    transform: translateX(20rem) translateY(10rem)
+    -webkit-filter: brightness(0.2) 
+    -moz-filter: brightness(0.2) 
+    -o-filter: brightness(0.2)   
+    z-index: 2      
+
+.active ~.content .content-wrap-absolute
+    height: 56.8rem
+
+.active ul
+    @extend .typo-size-l
+    list-style: none
+    line-height: 5rem
+    text-indent: -2rem    
+
+.active a
+    @extend .typo-color-anthrazit
+    text-decoration: none
+
