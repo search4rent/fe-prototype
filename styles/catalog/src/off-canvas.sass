@@ -30,10 +30,11 @@ nav.main.active
     -webkit-filter: brightness(0.2) 
     -moz-filter: brightness(0.2) 
     -o-filter: brightness(0.2)   
-    z-index: 2      
+    z-index: 2    
+    position: fixed  
 
-.active ~.content .content-wrap-absolute
-    height: 56.8rem
+.active ~body
+    overflow: hidden
 
 .active ul
     @extend .typo-size-l
