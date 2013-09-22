@@ -31,9 +31,26 @@ angular.module( "randl.controllers" ).controller( "LendItemsController", functio
     $scope.query = $routeParams.q;
 });
 
-angular.module( "randl.controllers" ).controller( "RentItemsController", function ( $scope, $routeParams ) {
+angular.module( "randl.controllers" ).controller( "RentItemsController", function ( $scope, $routeParams, $http ) {
     activateRent();
     $scope.query = $routeParams.q;
+
+    function search ( q ) {
+        var url = "/searchservice-0.0.1-SNAPSHOT/search/-/search/" + q + "/1/5";
+        $http.get( url ).
+            success( function( data, status, headers, config ) {
+                $scope.items = data.list;
+            }).
+            error( function( data, status, headers, config ) {
+                throw new Error( "Search after " + q + " failed. " + status );
+            });
+    }
+
+    search( $routeParams.q );
+
+    $scope.submit = function () {
+        search( $scope.query );
+    };
 });
 
 angular.module( "randl.controllers" ).controller( "LendController", function ( $scope, $location ) {
