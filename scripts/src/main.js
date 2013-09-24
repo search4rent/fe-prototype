@@ -73,8 +73,35 @@ angular.module( "randl.controllers" ).controller( "UserController", function () 
     console.log( "user" );
 });
 
-angular.module( "randl.controllers" ).controller( "ItemsNewController", function () {
-    console.log( "items" );
+angular.module( "randl.controllers" ).controller( "ItemsNewController", function ( $scope ) {
+
+    $scope.upload = function () {
+        
+        var files = $( ":file.new-item__picture" )[ 0 ].files;
+        if ( files.length == 0 ) return alert( "choose a file" );
+
+        var uri = "/upload";
+        var xhr = new XMLHttpRequest();
+        var form = new FormData();
+        
+        xhr.open( "POST", uri, true );
+        xhr.onreadystatechange = function() {
+            if ( xhr.readyState == 4 && xhr.status == 200 ) {
+                var data = JSON.parse( xhr.responseText );
+                $( ".new-item__img" ).attr( "src", data.resized );
+            }
+        };
+        xhr.upload.addEventListener( "progress", function( e ) {
+            if ( e.lengthComputable ) {
+                var percentage = Math.round( ( e.loaded * 100 ) / e.total );
+                console.log( percentage );
+            }
+        }, false );
+
+        form.append( "image", files[ 0 ] );
+        
+        xhr.send( form );
+    };
 });
 
 angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {

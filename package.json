@@ -5,7 +5,8 @@
   "main": "server.js",
   "dependencies": {
     "express": "~3.3.7",
-    "http-proxy": "~0.10.3"
+    "http-proxy": "~0.10.3",
+    "cloudinary": "~1.0.5"
   },
   "devDependencies": {},
   "scripts": {

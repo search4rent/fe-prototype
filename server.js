@@ -1,8 +1,17 @@
-var express = require( "express" );
-var path = require( "path" );
-var app = express();
-var httpProxy = require( "http-proxy" );
-var routingProxy = new httpProxy.RoutingProxy();
+var express         = require( "express" );
+var path            = require( "path" );
+var fs              = require( "fs" );
+var app             = express();
+var httpProxy       = require( "http-proxy" );
+var routingProxy    = new httpProxy.RoutingProxy();
+
+
+var cloudinary = require("cloudinary");
+cloudinary.config({ 
+    cloud_name: "hd0wxiur1", 
+    api_key: "264668386615174", 
+    api_secret: "p9t0u1-VySGbDlFd4gOyMfm1gng" 
+});
 
 function proxy ( pattern, host, port ) {
     
@@ -17,38 +26,36 @@ function proxy ( pattern, host, port ) {
         }
     }
 }
+
 //http://line030.de:8181/searchservice-0.0.1-SNAPSHOT/search/-/search/name/1/3
+app.use( express.bodyParser() )
 app.use( proxy( "/searchservice*", "line030.de", 8181 ) );
 app.use( "/assets", express.static( __dirname ) );
 app.use( "/views", express.static( path.join( __dirname, "views"  ) ) );
 
-app.get( "/auth", function ( req, res, next ) {
-    console.log( req );
-    res.send( 200 );
-});
+app.post( "/upload", function( req, res, next ) {
+    var stream = cloudinary.uploader.upload_stream( function( result ) {
 
-app.get( "/cloudup", function ( req, res, next ) {
-    var https = require( "https" );
-    var options = {
-        hostname: 'www.cloudup.com',
-        port: 443,
-        path: '/oauth/access_token?grant_type=password',
-        method: 'POST'
-    };
+        console.log( result );
 
-    var _req = https.request(options, function( res ) {
-        res.on('data', function(d) {
-            console.log( d );
+        var img = cloudinary.url(result.public_id, {
+            format: "png",
+            width: 320,
+            height: 240,
+            crop: "fill"
         });
-    });
 
-    _req.end();
+        var data = {
+            original: result.url,
+            resized: img
+        };
 
-    _req.on('error', function(e) {
-        console.error(e);
-    });
-    var accessToken = "lkajsfd";
-    res.send( accessToken );
+        res.json( data );
+        
+    }, { public_id: req.body.title } );
+
+    fs.createReadStream( req.files.image.path, { encoding: "binary" } )
+        .on( "data", stream.write ).on( "end", stream.end );
 });
 
 app.get( "*", function ( req, res, next ) {
