@@ -73,6 +73,10 @@ angular.module( "randl.controllers" ).controller( "UserController", function () 
     console.log( "user" );
 });
 
+angular.module( "randl.controllers" ).controller( "ItemsNewController", function () {
+    console.log( "items" );
+});
+
 angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {
 
     $routeProvider.when( "/", {
@@ -93,6 +97,11 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
     $routeProvider.when( "/items/rent", {
         templateUrl: "/views/items-rent.html",
         controller: "RentItemsController"
+    });
+
+    $routeProvider.when( "/items/new", {
+        templateUrl: "/views/items-new.html",
+        controller: "ItemsNewController"
     });
 
     $routeProvider.when( "/user/:id", {
