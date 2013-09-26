@@ -73,6 +73,10 @@ angular.module( "randl.controllers" ).controller( "UserController", function () 
     console.log( "user" );
 });
 
+angular.module( "randl.controllers" ).controller( "ItemController", function () {
+    console.log( "item" );
+});
+
 angular.module( "randl.controllers" ).controller( "ItemsNewController", function ( $scope ) {
 
     $scope.upload = function () {
@@ -109,6 +113,11 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
     $routeProvider.when( "/", {
         templateUrl: "views/rent.html",
         controller: "RentController"
+    });
+
+    $routeProvider.when( "/item", {
+        templateUrl: "views/item.html",
+        controller: "ItemController"
     });
 
     $routeProvider.when( "/lend", {

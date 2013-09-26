@@ -1,4 +1,84 @@
-.back_wrap
+.back-wrap-rent,
+.back-wrap-lend
     height: 4.5rem
+    background-color: $anthrazit
+
+.back-wrap-rent    
+    border-bottom: 1px solid $rent-primary-color
+
+.back-wrap-lend    
+    border-bottom: 1px solid $lend-primary-color
+
+.back-wrap-rent a,
+.back-wrap-lend a
+    @extend .typo-size-l
+    line-height: 4.2rem
+    text-decoration: none
+    margin-left: 1rem
+
+.back-wrap-rent a
+    @extend .typo-color-rent
+
+.back-wrap-lend a
+    @extend .typo-color-lend
+
+.item-pic
+    height: 19.7rem
+    background: url(../../../img/temp_ps4.jpg) no-repeat
+    background-size: cover
+
+.item-content
+    height: auto
     width: 100%
-    background-color: $grey02
+    padding: 2rem    
+    webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box   
+
+.item-headline
+    @extend .typo-size-xl
+    @extend .typo-color-anthrazit
+    line-height: 3.4rem
+    overflow: hidden 
+
+.item-place
+    @extend .typo-size-s
+    @extend .typo-color-anthrazit    
+    height: 3rem
+    line-height: 2.5rem   
+
+.item-price
+    @extend .typo-size-s
+    @extend .typo-color-orange     
+    line-height: 4.5rem    
+    margin-bottom: 3rem
+
+.item-condition
+    @extend .copy-text
+
+.footer
+    position: fixed
+    bottom: 0
+    left: 0 
+    border-bottom: none    
+
+.footer a
+    float: right
+    margin-right: 1rem
+
+.white-space
+    height: 6rem
+
+.user
+    float: right
+    margin-top: 5rem
+    width: 8rem
+    height: 5rem
+    background-color: $white
+
+.user-pic
+    width: 5rem
+    height: 5rem
+    background: url(../../../img/temp_ps4.jpg) no-repeat
+    background-size: cover    

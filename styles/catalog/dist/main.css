@@ -9,42 +9,52 @@
   src: url(../../fonts/quicksand/Quicksand_Book.otf) format(opentype);
   font-weight: normal; }
 
-.typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu {
+.typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu, .item-headline {
   font-size: 3.2rem; }
 
-.typo-size-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .active ul {
+.typo-size-l, .headline-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .active ul, .back-wrap-rent a,
+.back-wrap-lend a {
   font-size: 2rem; }
 
-.typo-size-m {
+.typo-size-m, .headline-m, .copy-text, .item-condition {
   font-size: 1.5rem; }
 
-.typo-size-s, .list-item-place, .list-item-price {
+.typo-size-s, .list-item-place, .list-item-price, .item-place, .item-price {
   font-size: 1.3rem; }
 
 .typo-color-white, .button-menu {
   color: white; }
 
-.typo-color-anthrazit, .rent .button-rent-search, .lend .button-lend-search, .list-item-place, .active a {
+.typo-color-anthrazit, .copy-text, .item-condition, .rent .button-rent-search, .lend .button-lend-search, .list-item-place, .active a, .item-headline, .item-place {
   color: #252525; }
 
 .typo-color-grey03 {
   color: #b4b4b4; }
 
-.typo-color-lend, .button-lend-search, .rent .button-lend-search {
+.typo-color-lend, .button-lend-search, .rent .button-lend-search, .back-wrap-lend a {
   color: #ace502; }
 
-.typo-color-rent, .button-rent-search, .lend .button-rent-search {
+.typo-color-rent, .button-rent-search, .lend .button-rent-search, .back-wrap-rent a {
   color: #fefb00; }
 
 .typo-color-blue, .list-item-headline {
   color: #1485cc; }
 
-.typo-color-orange, .list-item-price {
+.typo-color-orange, .list-item-price, .item-price {
   color: #eb8004; }
 
 a.link-negative:link,
 a.link-negative:visited {
   color: white; }
+
+.headline-l {
+  line-height: 3.3rem; }
+
+.headline-m {
+  line-height: 2rem; }
+
+.copy-text, .item-condition {
+  line-height: 2.3rem; }
 
 .button-search,
 .button-lend,
@@ -297,10 +307,74 @@ nav.main.active {
 .active a {
   text-decoration: none; }
 
-.back_wrap {
+.back-wrap-rent,
+.back-wrap-lend {
   height: 4.5rem;
+  background-color: #252525; }
+
+.back-wrap-rent {
+  border-bottom: 1px solid #fefb00; }
+
+.back-wrap-lend {
+  border-bottom: 1px solid #ace502; }
+
+.back-wrap-rent a,
+.back-wrap-lend a {
+  line-height: 4.2rem;
+  text-decoration: none;
+  margin-left: 1rem; }
+
+.item-pic {
+  height: 19.7rem;
+  background: url(../../../img/temp_ps4.jpg) no-repeat;
+  background-size: cover; }
+
+.item-content {
+  height: auto;
   width: 100%;
-  background-color: #2f2f2f; }
+  padding: 2rem;
+  webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.item-headline {
+  line-height: 3.4rem;
+  overflow: hidden; }
+
+.item-place {
+  height: 3rem;
+  line-height: 2.5rem; }
+
+.item-price {
+  line-height: 4.5rem;
+  margin-bottom: 3rem; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-bottom: none; }
+
+.footer a {
+  float: right;
+  margin-right: 1rem; }
+
+.white-space {
+  height: 6rem; }
+
+.user {
+  float: right;
+  margin-top: 5rem;
+  width: 8rem;
+  height: 5rem;
+  background-color: white; }
+
+.user-pic {
+  width: 5rem;
+  height: 5rem;
+  background: url(../../../img/temp_ps4.jpg) no-repeat;
+  background-size: cover; }
 
 body {
   background: url(../../../img/00_global/back_structure.gif);
