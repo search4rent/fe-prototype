@@ -58,13 +58,17 @@ angular.module( "randl.controllers" ).controller( "ItemsDetailController", funct
     $scope.location = "Konstanz";
 
     $scope.price = "225,99"
+
+    $scope.picture = "/assets/img/temp_ps4.jpg"
 });
 
 angular.module( "randl.controllers" ).controller( "ItemsNewController", function ( $scope ) {
 
-    $scope.upload = function () {
+    function uploadPicture () {
+        console.log( "upload" );
         
-        var files = $( ":file.new-item__picture" )[ 0 ].files;
+        var files = this.files;
+
         if ( files.length == 0 ) return alert( "choose a file" );
 
         var uri = "/upload";
@@ -75,7 +79,8 @@ angular.module( "randl.controllers" ).controller( "ItemsNewController", function
         xhr.onreadystatechange = function() {
             if ( xhr.readyState == 4 && xhr.status == 200 ) {
                 var data = JSON.parse( xhr.responseText );
-                $( ".new-item__img" ).attr( "src", data.resized );
+                $scope.picture = data.resized;
+                $scope.$apply();
             }
         };
         xhr.upload.addEventListener( "progress", function( e ) {
@@ -89,6 +94,14 @@ angular.module( "randl.controllers" ).controller( "ItemsNewController", function
         
         xhr.send( form );
     };
+
+    $scope.choosePicture = function () {
+        $( ".js-new-item__file" ).click();
+    };
+
+    $( ".js-new-item__file" ).change( uploadPicture );
+
+    $scope.picture = "http://placehold.it/400x200"
 });
 
 angular.module( "randl.controllers" ).controller( "ItemsLendController", function ( $scope, $routeParams ) {
@@ -155,7 +168,7 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
         controller: "UserController"
     });
 
-    $routeProvider.otherwise( { redirectTo: "/" } );
+    // $routeProvider.otherwise( { redirectTo: "/" } );
 
     $locationProvider.html5Mode( true );
 });

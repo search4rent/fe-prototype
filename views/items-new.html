@@ -1,6 +1,35 @@
-<h1>New Item</h1>
+<!-- <h1>New Item</h1>
 <form method="post" enctype="multipart/form-data" ng-submit="upload()">
     <input type="file" name="image" class="new-item__picture" accept="image/*" />
     <input type="submit" value="Upload" />
 </form>
 <img src="http://placehold.it/320x240" class="new-item__img" />
+ -->
+
+
+<form method="post" enctype="multipart/form-data" ng-submit="upload()">
+    <div class="back-wrap-rent s-all"> 
+        <a href="/items/lend"><span class='iconic arrow_left'></span>&nbsp;Back</a>
+    </div>
+    <div class="item-pic s-all" ng-click="choosePicture()">
+        <img src="{{picture}}" />
+    </div>
+    <input style="display:none" type="file" name="image" class="js-new-item__file" accept="image/*" />
+    <div class="item-content s-all">
+        <input placeholder="Playstation 3" value="{{title}}" />
+        <div>
+            in <input placeholder="Konstanz" value="{{location}}" required />
+        </div>  
+        <div>
+            <input type="number" placeholder="222.25" class="typo-size-xl" value="{{price}}" required />€ per day
+        </div>            
+        <div>
+            <span class="headline-l">Condition:</span><br />
+            <textarea placeholder="Describe condition..." required>{{condition}}</textarea>
+        </div>
+        <div class="white-space"></div>
+    </div>
+    <div class="back-wrap-rent footer s-all">
+        </div><input type="submit" value="Upload" /><span class='iconic arrow_right'></span></div>
+    </div>
+</form>
