@@ -46,8 +46,18 @@ angular.module( "randl.controllers" ).controller( "UserController", function ( $
     console.log( "user", $routeParams.id );
 });
 
-angular.module( "randl.controllers" ).controller( "ItemsDetailController", function ( $routeParams ) {
+angular.module( "randl.controllers" ).controller( "ItemsDetailController", function ( $scope, $routeParams ) {
     console.log( "item", $routeParams.id );
+
+    $scope.condition = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
+            "tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et " + 
+            "accusam et justo duo dolores et ea."
+
+    $scope.title = "Playstation mit 4 Controllern";
+
+    $scope.location = "Konstanz";
+
+    $scope.price = "225,99"
 });
 
 angular.module( "randl.controllers" ).controller( "ItemsNewController", function ( $scope ) {
