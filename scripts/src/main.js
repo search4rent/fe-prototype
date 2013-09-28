@@ -26,33 +26,6 @@ angular.module( "randl.controllers" ).controller( "MainController", function ( $
     $scope.$routeParams = $routeParams;
 });
 
-angular.module( "randl.controllers" ).controller( "LendItemsController", function ( $scope, $routeParams ) {
-    activateLend();
-    $scope.query = $routeParams.q;
-});
-
-angular.module( "randl.controllers" ).controller( "RentItemsController", function ( $scope, $routeParams, $location, $http ) {
-    activateRent();
-    $scope.query = $routeParams.q;
-
-    function search ( q ) {
-        var url = "/searchservice-0.0.1-SNAPSHOT/search/-/search/" + q + "/1/5";
-        $http.get( url ).
-            success( function( data, status, headers, config ) {
-                $scope.items = data.list;
-            }).
-            error( function( data, status, headers, config ) {
-                throw new Error( "Search after " + q + " failed. " + status );
-            });
-    }
-
-    search( $routeParams.q );
-
-    $scope.submit = function () {
-        $location.search("q", $scope.query );
-    };
-});
-
 angular.module( "randl.controllers" ).controller( "LendController", function ( $scope, $location ) {
     activateLend();
 
@@ -69,12 +42,12 @@ angular.module( "randl.controllers" ).controller( "RentController", function ( $
     };
 });
 
-angular.module( "randl.controllers" ).controller( "UserController", function () {
-    console.log( "user" );
+angular.module( "randl.controllers" ).controller( "UserController", function ( $routeParams ) {
+    console.log( "user", $routeParams.id );
 });
 
-angular.module( "randl.controllers" ).controller( "ItemController", function () {
-    console.log( "item" );
+angular.module( "randl.controllers" ).controller( "ItemsDetailController", function ( $routeParams ) {
+    console.log( "item", $routeParams.id );
 });
 
 angular.module( "randl.controllers" ).controller( "ItemsNewController", function ( $scope ) {
@@ -108,31 +81,43 @@ angular.module( "randl.controllers" ).controller( "ItemsNewController", function
     };
 });
 
+angular.module( "randl.controllers" ).controller( "ItemsLendController", function ( $scope, $routeParams ) {
+    activateLend();
+    $scope.query = $routeParams.q;
+});
+
+angular.module( "randl.controllers" ).controller( "ItemsRentController", function ( $scope, $routeParams, $location, $http ) {
+    activateRent();
+    $scope.query = $routeParams.q;
+
+    function search ( q ) {
+        var url = "/searchservice-0.0.1-SNAPSHOT/search/-/search/" + q + "/1/5";
+        $http.get( url ).
+            success( function( data, status, headers, config ) {
+                $scope.items = data.list;
+            }).
+            error( function( data, status, headers, config ) {
+                throw new Error( "Search after " + q + " failed. " + status );
+            });
+    }
+
+    search( $routeParams.q );
+
+    $scope.submit = function () {
+        $location.search( "q", $scope.query );
+    };
+});
+
 angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvider, $locationProvider ) {
 
     $routeProvider.when( "/", {
-        templateUrl: "views/rent.html",
+        templateUrl: "/views/rent.html",
         controller: "RentController"
     });
 
-    $routeProvider.when( "/item", {
-        templateUrl: "views/item.html",
-        controller: "ItemController"
-    });
-
     $routeProvider.when( "/lend", {
-        templateUrl: "views/lend.html",
+        templateUrl: "/views/lend.html",
         controller: "LendController"
-    });
-
-    $routeProvider.when( "/items/lend", {
-        templateUrl: "/views/items-lend.html",
-        controller: "LendItemsController"
-    });
-
-    $routeProvider.when( "/items/rent", {
-        templateUrl: "/views/items-rent.html",
-        controller: "RentItemsController"
     });
 
     $routeProvider.when( "/items/new", {
@@ -140,10 +125,27 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
         controller: "ItemsNewController"
     });
 
-    $routeProvider.when( "/user/:id", {
+    $routeProvider.when( "/items/lend", {
+        templateUrl: "/views/items-lend.html",
+        controller: "ItemsLendController"
+    });
+
+    $routeProvider.when( "/items/rent", {
+        templateUrl: "/views/items-rent.html",
+        controller: "ItemsRentController"
+    });
+
+    $routeProvider.when( "/items/:id", {
+        templateUrl: "/views/items-detail.html",
+        controller: "ItemsDetailController"
+    });
+
+    $routeProvider.when( "/users/:id", {
         templateUrl: "/views/user.html",
         controller: "UserController"
     });
+
+    $routeProvider.otherwise( { redirectTo: "/" } );
 
     $locationProvider.html5Mode( true );
 });
