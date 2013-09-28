@@ -79,7 +79,7 @@ angular.module( "randl.controllers" ).controller( "ItemsNewController", function
         xhr.onreadystatechange = function() {
             if ( xhr.readyState == 4 && xhr.status == 200 ) {
                 var data = JSON.parse( xhr.responseText );
-                $scope.picture = data.resized;
+                $scope.form.picture = data.resized;
                 $scope.$apply();
             }
         };
@@ -99,9 +99,15 @@ angular.module( "randl.controllers" ).controller( "ItemsNewController", function
         $( ".js-new-item__file" ).click();
     };
 
+    $scope.upload = function () {
+        console.dir( $scope.form );
+    };
+
     $( ".js-new-item__file" ).change( uploadPicture );
 
-    $scope.picture = "http://placehold.it/400x200"
+    $scope.form = {
+        picture: "http://placehold.it/400x200"
+    };
 });
 
 angular.module( "randl.controllers" ).controller( "ItemsLendController", function ( $scope, $routeParams ) {

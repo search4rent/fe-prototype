@@ -12,20 +12,20 @@
         <a href="/items/lend"><span class='iconic arrow_left'></span>&nbsp;Back</a>
     </div>
     <div class="item-pic s-all" ng-click="choosePicture()">
-        <img src="{{picture}}" />
+        <img src="{{form.picture}}" />
     </div>
     <input style="display:none" type="file" name="image" class="js-new-item__file" accept="image/*" />
     <div class="item-content s-all">
-        <input placeholder="Playstation 3" value="{{title}}" />
+        <input placeholder="Playstation 3" ng-model="form.title" />
         <div>
-            in <input placeholder="Konstanz" value="{{location}}" required />
+            in <input placeholder="Konstanz" ng-model="form.location" required />
         </div>  
         <div>
-            <input type="number" placeholder="222.25" class="typo-size-xl" value="{{price}}" required />€ per day
+            <input type="number" placeholder="222.25" class="typo-size-xl" ng-model="form.price" required />€ per day
         </div>            
         <div>
             <span class="headline-l">Condition:</span><br />
-            <textarea placeholder="Describe condition..." required>{{condition}}</textarea>
+            <textarea placeholder="Describe condition..." required ng-model="form.condition"></textarea>
         </div>
         <div class="white-space"></div>
     </div>
