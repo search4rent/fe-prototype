@@ -62,10 +62,10 @@ angular.module( "randl.controllers" ).controller( "ItemsDetailController", funct
     $scope.picture = "/assets/img/temp_ps4.jpg"
 });
 
-angular.module( "randl.controllers" ).controller( "ItemsNewController", function ( $scope ) {
+angular.module( "randl.controllers" ).controller( "ItemsNewController", function ( $scope, $http ) {
 
     function uploadPicture () {
-        console.log( "upload" );
+        return console.log( "upload" );
         
         var files = this.files;
 
@@ -100,6 +100,16 @@ angular.module( "randl.controllers" ).controller( "ItemsNewController", function
     };
 
     $scope.upload = function () {
+        $http.post( "/searchservice-0.0.1-SNAPSHOT/search/-/item/1123", {} )
+        _d = {
+            id: "63ae0c63-2342-4bb0-9b16-914001ad7d0f",
+            description: $scope.condition,
+            location: null,
+            name: $scope.title,
+            picture: [ $scope.picture ],
+            price: $scope.price,
+            category: []
+        }
         console.dir( $scope.form );
     };
 
@@ -134,6 +144,70 @@ angular.module( "randl.controllers" ).controller( "ItemsRentController", functio
 
     $scope.submit = function () {
         $location.search( "q", $scope.query );
+    };
+});
+
+angular.module( "randl.controllers" ).controller( "MessagesController", function ( $scope ) {
+    
+    var messaging = new Firebase( "https://randl-storage.firebaseIO.com/messaging" );
+    var auth = new FirebaseSimpleLogin( messaging, function( error, user ) {
+        if ( error ) throw error;
+        $scope.user = user;
+        $scope.$apply();
+    });
+
+    $scope.messages = [];
+
+    $scope.register = function () {
+        auth.createUser( $scope.registration__email, $scope.registration__password, function( error, user ) {
+            if (!error) {
+                console.log('User Id: ' + user.id + ', Email: ' + user.email);
+            }
+        });
+    };
+
+    $scope.login = function () {
+        auth.login( "password", {
+            email: $scope.login__email,
+            password: $scope.login__password,
+            rememberMe: true
+        });
+    };
+
+    $scope.$watch( "user", function () {
+        if ( $scope.user ) {
+            messaging.child( "subscribers" ).child( $scope.user.id ).on( "child_added", function ( snapshot ) {
+                messaging.child( "conversations" ).child( snapshot.name() ).on( "child_added", function ( snapshot ) {
+                    messaging.child( "messages" ).child( snapshot.name() ).on( "value", function ( snapshot ) {
+                        $scope.messages.push( snapshot.val() );
+                        $scope.$apply();
+                    });
+                });
+            });
+        }
+    });
+
+    $scope.send = function () {
+        var messages = messaging.child( "messages" );
+        var message = messages.push( {
+            conversationId: 1,
+            from: $scope.user.id,
+            to: "2",
+            body: $scope.message,
+            time: new Date().getTime(),
+            read: false
+        });
+
+        message.on( "value", function ( snapshot ) {
+            var conversations = messaging.child( "conversations" );
+            var conversation = conversations.push();
+            conversation.child( snapshot.name() ).set( true );
+
+            var subscribers = messaging.child( "subscribers" );
+            subscribers.child( snapshot.val().from ).child( conversation.name() ).set( true );
+            subscribers.child( snapshot.val().to ).child( conversation.name() ).set( true );
+        })
+
     };
 });
 
@@ -172,6 +246,11 @@ angular.module( "randl.routes", [ "ngRoute" ] ).config( function ( $routeProvide
     $routeProvider.when( "/users/:id", {
         templateUrl: "/views/user.html",
         controller: "UserController"
+    });
+
+    $routeProvider.when( "/messages", {
+        templateUrl: "/views/messages.html",
+        controller: "MessagesController"
     });
 
     // $routeProvider.otherwise( { redirectTo: "/" } );
