@@ -12,14 +12,14 @@
 .typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu, .item-headline, .item-price {
   font-size: 3.2rem; }
 
-.typo-size-l, .headline-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .active ul, .back-wrap-rent a,
+.typo-size-l, .headline-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .list-item-price, .active ul, .back-wrap-rent a,
 .back-wrap-lend a, .user-name {
   font-size: 2rem; }
 
 .typo-size-m, .headline-m, .copy-text, .item-condition, .item-user, .item-place, .item-date {
   font-size: 1.5rem; }
 
-.typo-size-s, .list-item-place, .list-item-price, .user-rating {
+.typo-size-s, .list-item-place, .user-rating {
   font-size: 1.3rem; }
 
 .typo-color-white, .button-menu {
@@ -243,15 +243,15 @@ a.link-negative:visited {
 .list-item-headline {
   height: auto;
   max-height: 4.7rem;
-  line-height: 2.3rem;
-  overflow: hidden; }
+  line-height: 2.5rem;
+  overflow: hidden;
+  margin-top: 0.5rem; }
 
 .list-item-place {
-  height: 2.5rem;
-  line-height: 2.3rem; }
+  margin-top: 0.7rem; }
 
 .list-item-price {
-  height: 3.8rem;
+  height: 5.8rem;
   line-height: 4.5rem; }
 
 .text-wrap {
