@@ -2,16 +2,24 @@
     <a href="/items/rent"><span class='iconic arrow_left'></span>&nbsp;Back</a>
 </div>
 <div class="item-pic s-all">
-    <img src="{{picture}}" alt="picture">
-</div>
+    <a href="#"><img style="background-image: url({{picture}})"/></a>
 </div>
 <div class="item-content s-all">
     <div class="item-headline">{{title}}</div>
-    <div class="item-place">in {{location}}</div>  
-    <div class="item-price"><span class="typo-size-xl">{{price}}</span>€ per day</div>            
+    <div class="item-place">in {{location}}</div> 
+    <div class="item-date">von Mi 25.11. bis So 28.11.</div>      
+    <div class="item-price">{{price}}<span class="typo-size-m">€</span></div>            
     <div class="item-condition copy-text">
-        <span class="headline-l">Condition:</span><br />
+        <div class="headline-m">Zustand:</div>
         {{condition}}
+    </div>
+    <div class="item-user">
+        <div class="headline-m">Verleiher:</div>        
+        <div class="user-pic-s"></div>
+        <div class="user-details">
+            <a href="#" class="user-name">Manfred</a>
+            <div class="user-rating">dabei seit 1.1.2014</div>            
+        </div>
     </div>
     <div class="white-space"></div>
 </div>
