@@ -1,3 +1,9 @@
+.borderbox
+    webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box
+
 .back-wrap-rent,
 .back-wrap-lend
     height: 4.5rem
@@ -23,61 +29,101 @@
     @extend .typo-color-lend
 
 .item-pic
-    height: 19.7rem
-    background-size: cover
+    height: 14.6rem
+
+.item-pic img
+    width: 100%
+    height: 100%   
+    background-size: cover 
+    background-position: center center    
+    background-repeat: no-repeat
 
 .item-content
+    @extend .borderbox  
     height: auto
     width: 100%
     padding: 2rem    
-    webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
-    -ms-box-sizing: border-box
-    box-sizing: border-box   
 
 .item-headline
     @extend .typo-size-xl
     @extend .typo-color-anthrazit
-    line-height: 3.4rem
+    line-height: 3.7rem
     overflow: hidden 
+    margin-bottom: 1.1rem    
 
 .item-place
-    @extend .typo-size-s
+    @extend .typo-size-m
     @extend .typo-color-anthrazit    
-    height: 3rem
-    line-height: 2.5rem   
+    padding-bottom: 2.5rem
+    margin-bottom: 2.5rem 
+    border-bottom: 1px solid $grey03    
+
+.item-date
+    @extend .typo-size-m
+    @extend .typo-color-anthrazit
+    text-align: center
+    margin-bottom: 1.3rem
 
 .item-price
-    @extend .typo-size-s
+    @extend .typo-size-xl
     @extend .typo-color-orange     
-    line-height: 4.5rem    
-    margin-bottom: 3rem
+    text-align: center
+    margin-bottom: 2.5rem
 
 .item-condition
     @extend .copy-text
+    padding-top: 2.5rem
+    border-top: 1px solid $grey03     
+    margin-bottom: 2.5rem    
+
+.item-user
+    @extend .copy-text
+    margin-bottom: 1rem    
+
+.user-pic-s
+    width: 5rem
+    height: 5rem
+    background: url(../../../img/temp_user.jpg) no-repeat
+    background-size: cover 
+    float: left 
+
+.user-details
+    @extend .borderbox
+    text-indent: 1rem 
+    margin-left: 5rem
+
+.user-name
+    @extend .typo-size-l
+    @extend .typo-color-blue
+    line-height: 3.5rem
+    height: 2.7rem 
+    display: block
+    text-decoration: none
+
+.user-rating
+    @extend .typo-size-s
+    height: 2.3rem        
 
 .footer
     position: fixed
     bottom: 0
     left: 0 
-    border-bottom: none    
+    border-bottom: none  
 
 .footer a
     float: right
     margin-right: 1rem
 
+.back-wrap-rent.footer
+    border-top: 1px solid $rent-primary-color  
+
+.back-wrap-lend.footer
+    border-top: 1px solid $lend-primary-color 
+
 .white-space
     height: 6rem
 
-.user
-    float: right
-    margin-top: 5rem
-    width: 8rem
-    height: 5rem
-    background-color: $white
+ 
 
-.user-pic
-    width: 5rem
-    height: 5rem
-    background: url(../../../img/temp_ps4.jpg) no-repeat
-    background-size: cover    
+
+
