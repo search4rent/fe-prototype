@@ -12,23 +12,23 @@
 .typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu, .item-headline, .item-price {
   font-size: 3.2rem; }
 
-.typo-size-l, .headline-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .list-item-price, .active ul, .back-wrap-rent a,
+.typo-size-l, .headline-l, .label-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .list-item-price, .active ul, .back-wrap-rent a,
 .back-wrap-lend a, .user-name {
   font-size: 2rem; }
 
-.typo-size-m, .headline-m, .copy-text, .item-condition, .item-user, .item-place, .item-date {
+.typo-size-m, .headline-m, .copy-text, .item-condition, .item-user, .label-m, .item-place, .item-date {
   font-size: 1.5rem; }
 
-.typo-size-s, .list-item-place, .user-rating {
+.typo-size-s, .field-m, .search-input, .list-item-place, .user-rating {
   font-size: 1.3rem; }
 
 .typo-color-white, .button-menu {
   color: white; }
 
-.typo-color-anthrazit, .copy-text, .item-condition, .item-user, .rent .button-rent-search, .lend .button-lend-search, .list-item-place, .active a, .item-headline, .item-place, .item-date {
+.typo-color-anthrazit, .copy-text, .item-condition, .item-user, .label-m, .rent .button-rent-search, .lend .button-lend-search, .list-item-place, .active a, .item-headline, .item-place, .item-date {
   color: #252525; }
 
-.typo-color-grey03 {
+.typo-color-grey03, .field-m, .search-input {
   color: #b4b4b4; }
 
 .typo-color-lend, .button-lend-search, .rent .button-lend-search, .back-wrap-lend a {
@@ -92,6 +92,25 @@ a.link-negative:visited {
   border: none;
   text-align: center; }
 
+.label-m {
+  line-height: 2.2rem; }
+
+.label-l {
+  line-height: 2.5rem; }
+
+.field-m, .search-input {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 4rem;
+  padding: 0.5rem;
+  text-indent: 0.5rem;
+  border: 1px #b4b4b4 solid;
+  background-color: white; }
+
+.field-m:focus, .search-input:focus, .field-l:focus {
+  border: 1px #1485cc solid; }
+
 .search-l-wrap-lend,
 .search-l-wrap-rent,
 .search-input,
@@ -122,7 +141,7 @@ a.link-negative:visited {
   position: relative;
   height: 8rem;
   top: 50%;
-  margin-top: -3.5rem;
+  margin-top: -4rem;
   padding: 2rem; }
 
 .search-s-field {
@@ -142,8 +161,7 @@ a.link-negative:visited {
   background-color: #2f2f2f; }
 
 .search-l-button {
-  width: 65%;
-  top: 0; }
+  width: 65%; }
 
 .search-l-title {
   line-height: 1.9rem;
@@ -151,24 +169,16 @@ a.link-negative:visited {
 
 .search-input {
   width: 75%;
-  height: 4rem;
-  padding: 0.5rem;
-  text-indent: 0.5rem;
-  border: 1px #252525 solid;
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-  background-color: white;
-  box-shadow: inset 0 1px 2px #c8c8c8; }
-
-.input-toplabel {
-  display: block;
-  margin: 0 0 0.2rem 0;
-  color: #252525; }
+  border: 1px solid #252525;
+  box-shadow: inset 0 1px 2px #c8c8c8;
+  margin-bottom: -0.1rem; }
 
 .search-specific-button-search {
   width: 25%;
-  margin-left: -0.5rem; }
+  margin-left: -0.6rem; }
+
+.search-label {
+  margin-top: -0.2rem; }
 
 .search-s-border-rent,
 .search-s-border-lend {
@@ -300,9 +310,8 @@ nav.main.active {
 .active a {
   text-decoration: none; }
 
-.borderbox, .search-l-wrap-lend,
+.borderbox, .field-m, .search-input, .search-l-wrap-lend,
 .search-l-wrap-rent,
-.search-input,
 .search-l-field,
 .search-s-field,
 .search-l-entry,
@@ -343,6 +352,14 @@ nav.main.active {
   height: auto;
   width: 100%;
   padding: 2rem; }
+
+.item-content input {
+  width: 100%;
+  margin-bottom: 2.5rem; }
+
+.item-content textarea {
+  width: 100%;
+  min-height: 10rem; }
 
 .item-headline {
   line-height: 3.7rem;

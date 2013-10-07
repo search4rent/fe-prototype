@@ -16,20 +16,18 @@
     </div>
     <input style="display:none" type="file" name="image" class="js-new-item__file" accept="image/*" />
     <div class="item-content s-all">
-        <input placeholder="Playstation 3" ng-model="form.title" />
-        <div>
-            in <input placeholder="Konstanz" ng-model="form.location" required />
-        </div>  
-        <div>
-            <input type="number" placeholder="222.25" class="typo-size-xl" ng-model="form.price" required />€ per day
-        </div>            
-        <div>
-            <span class="headline-l">Condition:</span><br />
-            <textarea placeholder="Describe condition..." required ng-model="form.condition"></textarea>
-        </div>
+        <label class="label-m">Item</label>            
+        <input placeholder="what you want to lend" ng-model="form.title" class="field-m" required /> 
+        <label class="label-m">Location</label>            
+        <input placeholder="location of the item" ng-model="form.location" class="field-m" required />   
+        <label class="label-m">Rental per day</label>            
+        <input placeholder="rental in €" ng-model="form.price" class="field-m" required /> 
+        <label class="label-m">Condition</label>            
+        <textarea placeholder="describe condition of your item" ng-model="form.condition" class="field-m" required /></textarea>
         <div class="white-space"></div>
     </div>
     <div class="back-wrap-rent footer s-all">
         </div><input type="submit" value="Upload" /><span class='iconic arrow_right'></span></div>
     </div>
 </form>
+  
