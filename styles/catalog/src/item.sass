@@ -118,7 +118,8 @@
     left: 0 
     border-bottom: none  
 
-.footer a
+.footer a,
+.upload-submit
     float: right
     margin-right: 1rem
 
@@ -130,6 +131,24 @@
 
 .white-space
     height: 6rem
+
+.pic-placeholder
+    background: url(../../../img/02_item/placeholder.png) no-repeat center center
+    background-color: rgba(255,255,255,0.6)
+    cursor: pointer
+
+.upload-submit,
+.upload-submit input
+    @extend .typo-size-l
+    @extend .typo-color-lend
+    font-family: $primary-font
+    font-weight: regular
+    background: none
+    border: none
+    line-height: 3.7rem
+    cursor: pointer
+  
+
 
  
 

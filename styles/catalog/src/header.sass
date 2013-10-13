@@ -5,12 +5,11 @@
 
 .logo
     height: 4.5rem
-    width: 5.5rem 
     background: url(../../../img/00_global/logo-home.png) no-repeat 10px center 
 
 .header-link a
     height: 100%
-    width: 4.5rem       
+    width: 4.9rem       
     line-height: 4.5rem 
     text-align: center
     text-decoration: none
@@ -26,29 +25,46 @@
     @extend .typo-color-rent 
 
 .rent .button-rent-search
-    background-color: $rent-primary-color
     @extend .color-rent 
     @extend .typo-size-xl
     @extend .typo-color-anthrazit
+    background-color: $rent-primary-color
 
 .rent .button-lend-search
     @extend .typo-size-l 
     @extend .typo-color-lend
 
 .lend .button-lend-search
-    background-color: $lend-primary-color
     @extend .color-lend         
     @extend .typo-size-xl
     @extend .typo-color-anthrazit        
+    background-color: $lend-primary-color
 
 .lend .button-rent-search
     @extend .typo-size-l 
     @extend .typo-color-rent       
-        
+
+.button-profile
+    @extend .typo-size-l 
+    @extend .typo-color-white    
+       
 .button-menu
     line-height: 4.5rem
     margin-left: 1rem
     @extend .typo-size-xl
-    @extend .typo-color-white   
+    @extend .typo-color-white 
 
+.notification
+    @extend .typo-size-xs
+    @extend .borderbox
+    line-height: 1.3rem
+    text-align: center
+    position: absolute
+    min-width: 1.5rem
+    height: 1.5rem
+    top: 0.6rem
+    right: 10.3rem
+    border-radius: 50%
+    padding: 0.2rem
+    background-color: $red
  

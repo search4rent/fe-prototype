@@ -12,8 +12,9 @@
 .typo-size-xl, .rent .button-rent-search, .lend .button-lend-search, .button-menu, .item-headline, .item-price {
   font-size: 3.2rem; }
 
-.typo-size-l, .headline-l, .label-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .list-item-headline, .list-item-price, .active ul, .back-wrap-rent a,
-.back-wrap-lend a, .user-name {
+.typo-size-l, .headline-l, .label-l, .button-lend-search, .button-rent-search, .rent .button-lend-search, .lend .button-rent-search, .button-profile, .list-item-headline, .list-item-price, .active ul, .back-wrap-rent a,
+.back-wrap-lend a, .user-name, .upload-submit,
+.upload-submit input {
   font-size: 2rem; }
 
 .typo-size-m, .headline-m, .copy-text, .item-condition, .item-user, .label-m, .item-place, .item-date {
@@ -22,7 +23,10 @@
 .typo-size-s, .field-m, .search-input, .list-item-place, .user-rating {
   font-size: 1.3rem; }
 
-.typo-color-white, .button-menu {
+.typo-size-xs, .notification {
+  font-size: 1.1rem; }
+
+.typo-color-white, .button-profile, .button-menu {
   color: white; }
 
 .typo-color-anthrazit, .copy-text, .item-condition, .item-user, .label-m, .rent .button-rent-search, .lend .button-lend-search, .list-item-place, .active a, .item-headline, .item-place, .item-date {
@@ -31,7 +35,8 @@
 .typo-color-grey03, .field-m, .search-input {
   color: #b4b4b4; }
 
-.typo-color-lend, .button-lend-search, .rent .button-lend-search, .back-wrap-lend a {
+.typo-color-lend, .button-lend-search, .rent .button-lend-search, .back-wrap-lend a, .upload-submit,
+.upload-submit input {
   color: #ace502; }
 
 .typo-color-rent, .button-rent-search, .lend .button-rent-search, .back-wrap-rent a {
@@ -132,7 +137,7 @@ a.link-negative:visited {
 
 .search-s-wrap {
   top: 4.5rem;
-  height: 8rem;
+  height: 8.1rem;
   z-index: 9; }
 
 .search-l-field,
@@ -169,9 +174,7 @@ a.link-negative:visited {
 
 .search-input {
   width: 75%;
-  border: 1px solid #252525;
-  box-shadow: inset 0 1px 2px #c8c8c8;
-  margin-bottom: -0.1rem; }
+  border: 1px solid #252525; }
 
 .search-specific-button-search {
   width: 25%;
@@ -200,12 +203,11 @@ a.link-negative:visited {
 
 .logo {
   height: 4.5rem;
-  width: 5.5rem;
   background: url(../../../img/00_global/logo-home.png) no-repeat 10px center; }
 
 .header-link a {
   height: 100%;
-  width: 4.5rem;
+  width: 4.9rem;
   line-height: 4.5rem;
   text-align: center;
   text-decoration: none;
@@ -221,6 +223,18 @@ a.link-negative:visited {
 .button-menu {
   line-height: 4.5rem;
   margin-left: 1rem; }
+
+.notification {
+  line-height: 1.3rem;
+  text-align: center;
+  position: absolute;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  top: 0.6rem;
+  right: 10.3rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+  background-color: #e62828; }
 
 .list-wrap {
   width: 100%;
@@ -315,7 +329,7 @@ nav.main.active {
 .search-l-field,
 .search-s-field,
 .search-l-entry,
-.search-s-wrap, .list-item-content, .item-content, .user-details {
+.search-s-wrap, .notification, .list-item-content, .item-content, .user-details {
   webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -413,7 +427,8 @@ nav.main.active {
   left: 0;
   border-bottom: none; }
 
-.footer a {
+.footer a,
+.upload-submit {
   float: right;
   margin-right: 1rem; }
 
@@ -425,6 +440,20 @@ nav.main.active {
 
 .white-space {
   height: 6rem; }
+
+.pic-placeholder {
+  background: url(../../../img/02_item/placeholder.png) no-repeat center center;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer; }
+
+.upload-submit,
+.upload-submit input {
+  font-family: Quicksand, Verdana, Geneva, Arial, sans-serif;
+  font-weight: regular;
+  background: none;
+  border: none;
+  line-height: 3.7rem;
+  cursor: pointer; }
 
 body {
   background: url(../../../img/00_global/back_structure.gif);

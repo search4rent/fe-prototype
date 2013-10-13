@@ -8,11 +8,11 @@
 
 
 <form method="post" enctype="multipart/form-data" ng-submit="upload()">
-    <div class="back-wrap-rent s-all"> 
+    <div class="back-wrap-lend s-all"> 
         <a href="/items/lend"><span class='iconic arrow_left'></span>&nbsp;Back</a>
     </div>
-    <div class="item-pic s-all" ng-click="choosePicture()">
-        <img src="{{form.picture}}" />
+    <div class="item-pic pic-placeholder s-all" ng-click="choosePicture()">
+        <!--<img src="{{form.picture}}" />-->
     </div>
     <input style="display:none" type="file" name="image" class="js-new-item__file" accept="image/*" />
     <div class="item-content s-all">
@@ -26,8 +26,8 @@
         <textarea placeholder="describe condition of your item" ng-model="form.condition" class="field-m" required /></textarea>
         <div class="white-space"></div>
     </div>
-    <div class="back-wrap-rent footer s-all">
-        </div><input type="submit" value="Upload" /><span class='iconic arrow_right'></span></div>
+    <div class="back-wrap-lend footer s-all">       
+        <div class="upload-submit"><input type="submit" value="Upload Now"/><span class='iconic arrow_right'></span></div>
     </div>
 </form>
   

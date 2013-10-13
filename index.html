@@ -13,32 +13,22 @@
     </head>
 
     <body>
-
-        <nav class="main s-all">
-            <ul>
-                <li><a href="#">Messages</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Current Lends</a></li>
-                <li><a href="#">Current Rents</a></li> 
-                <li><a href="#">Shoppinglist</a></li>                                
-            </ul>
-        </nav>
     
         <div class="content s-all">    
             <div ng-controller="MainController" class="s-all">
                 <div class="header-wrap s-all">
-                    <div class="s1-s2">
-                        <a class="button-menu" href="#" ng-click="toggleNav()">
-                            <span class='iconic list'></span>
-                        </a>                         
-                    </div>                
-                    <div class="header-link s3-s4">
+                    <a class="logo s1-s2" href="#"></a>                         
+                    <div class="header-link s3-s4">                        
                         <a class="button-rent-search" href="/">
                             <span class='iconic magnifying_glass'></span>
                         </a>
                         <a class="button-lend-search" href="/lend">
                             <span class='iconic upload'></span>
                         </a>        
+                        <a class="button-profile" href="/user">
+                            <span class='iconic user'></span>
+                            <span class="notification">2</span>
+                        </a>                        
                     </div>                 
                 </div>
             </div>
