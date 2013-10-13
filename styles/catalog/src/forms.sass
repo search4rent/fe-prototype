@@ -1,0 +1,24 @@
+.label-m
+    @extend .typo-size-m
+    @extend .typo-color-anthrazit
+    line-height: 2.2rem 
+
+.label-l
+    @extend .typo-size-l
+    line-height: 2.5rem
+
+.field-m
+    @extend .borderbox 
+    @extend .typo-size-s    
+    @extend .typo-color-grey03
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
+    height: 4rem  
+    padding: .5rem
+    text-indent: .5rem 
+    border: 1px $grey03 solid
+    background-color: $white
+
+.field-m:focus, .field-l:focus
+    border: 1px $search-primary-color solid
